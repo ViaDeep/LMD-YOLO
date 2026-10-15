@@ -1,0 +1,39 @@
+# Canonical stage 2 of OUR reproduction, not a published LMD_YOLO YAML.
+# LeYOLO-Nano backbone + MGConv(groups=2) at neck layers 21/24 + normal Detect.
+# Groups=2 and shortcut Conv2d 1x1 stride=2 are reproduction decisions.
+# Main-path channels, kernel=3 and stride=2 come from the replaced stage-1 neck.
+nc: 4
+depth_multiple: 1.0
+width_multiple: 1.0
+
+backbone:
+  - [-1, 1, LeYOLOConv, [16, 3, 2, "SI"]]  # 0
+  - [-1, 1, LeYOLOConv, [16, 1, 1, "SI"]]  # 1
+  - [-1, 1, LeYOLOInvertedBottleneck, [16, 3, 16, false, "SI", 2, false]]  # 2
+  - [-1, 1, LeYOLOInvertedBottleneck, [32, 3, 96, false, "SI", 2, true]]  # 3
+  - [-1, 1, LeYOLOInvertedBottleneck, [32, 3, 96, false, "SI", 1, true]]  # 4 P3
+  - [-1, 1, LeYOLOInvertedBottleneck, [64, 5, 96, true, "SI", 2, true]]  # 5
+  - [-1, 1, LeYOLOInvertedBottleneck, [64, 5, 192, true, "SI", 1, true]]  # 6
+  - [-1, 1, LeYOLOInvertedBottleneck, [64, 5, 192, true, "SI", 1, true]]  # 7
+  - [-1, 1, LeYOLOInvertedBottleneck, [64, 5, 192, true, "SI", 1, true]]  # 8
+  - [-1, 1, LeYOLOInvertedBottleneck, [64, 5, 192, true, "SI", 1, true]]  # 9 P4
+  - [-1, 1, LeYOLOInvertedBottleneck, [96, 5, 576, true, "SI", 2, true]]  # 10
+  - [-1, 1, LeYOLOInvertedBottleneck, [96, 5, 576, true, "SI", 1, true]]  # 11
+  - [-1, 1, LeYOLOInvertedBottleneck, [96, 5, 576, true, "SI", 1, true]]  # 12
+  - [-1, 1, LeYOLOInvertedBottleneck, [96, 5, 576, true, "SI", 1, true]]  # 13
+  - [-1, 1, SPPF, [96, 5]]  # 14 P5
+
+head:
+  - [-1, 1, nn.Upsample, [null, 2, "nearest"]]  # 15
+  - [[-1, 9], 1, Concat, [1]]  # 16
+  - [-1, 1, C2f, [128]]  # 17
+  - [-1, 1, nn.Upsample, [null, 2, "nearest"]]  # 18
+  - [[-1, 4], 1, Concat, [1]]  # 19
+  - [-1, 1, C2f, [64]]  # 20 P3
+  - [-1, 1, MGConv, [64, 3, 2]]  # 21, groups=2 fixed by MGConv
+  - [[-1, 17], 1, Concat, [1]]  # 22
+  - [-1, 1, C2f, [128]]  # 23 P4
+  - [-1, 1, MGConv, [128, 3, 2]]  # 24, groups=2 fixed by MGConv
+  - [[-1, 14], 1, Concat, [1]]  # 25
+  - [-1, 1, C2f, [256]]  # 26 P5
+  - [[20, 23, 26], 1, Detect, [nc]]  # 27 conventional Detect

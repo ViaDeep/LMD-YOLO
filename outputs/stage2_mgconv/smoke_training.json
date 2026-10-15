@@ -1,0 +1,22 @@
+{
+  "training_run": "C:\\TP1\\runs\\detect\\leyolo_nano_mgconv_stage2_smoke",
+  "best_validation_run": "C:\\TP1\\runs\\detect\\leyolo_nano_mgconv_stage2_best_val",
+  "best_weights": "C:\\TP1\\runs\\detect\\leyolo_nano_mgconv_stage2_smoke\\weights\\best.pt",
+  "last_weights": "C:\\TP1\\runs\\detect\\leyolo_nano_mgconv_stage2_smoke\\weights\\last.pt",
+  "train_epoch_metrics": {
+    "metrics/precision(B)": 0.0015588475098779267,
+    "metrics/recall(B)": 0.23617149476761362,
+    "metrics/mAP50(B)": 0.0035733827379382473,
+    "metrics/mAP50-95(B)": 0.0008330303489759046,
+    "fitness": 0.0008330303489759046
+  },
+  "explicit_best_validation_metrics": {
+    "metrics/precision(B)": 0.0015588475098779267,
+    "metrics/recall(B)": 0.23617149476761362,
+    "metrics/mAP50(B)": 0.0035733827379382473,
+    "metrics/mAP50-95(B)": 0.0008330303489759046,
+    "fitness": 0.0008330303489759046
+  },
+  "training_status": "PASS",
+  "best_validation_status": "PASS"
+}

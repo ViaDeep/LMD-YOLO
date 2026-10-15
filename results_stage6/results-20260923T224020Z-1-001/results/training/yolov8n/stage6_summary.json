@@ -1,0 +1,78 @@
+{
+  "model": "yolov8n",
+  "status": "COMPLETE",
+  "initialization": "scratch",
+  "structure": {
+    "architecture": "YOLOv8n",
+    "classes": [
+      "D00",
+      "D10",
+      "D20",
+      "D40"
+    ],
+    "strides": [
+      8,
+      16,
+      32
+    ],
+    "parameters": 3011628,
+    "gflops_640": 8.194918,
+    "flops_profile": {
+      "gflops": 8.1949184,
+      "macs": 4097459200,
+      "parameters": 3011628,
+      "method": "ultralytics-thop full 1x3x640x640 CPU forward; FLOPs=2*MACs",
+      "thop_version": "2.1.6"
+    }
+  },
+  "epochs": 20,
+  "best_epoch": 20,
+  "training_seconds": 1057.8304340839386,
+  "seconds_per_epoch": 52.89152170419693,
+  "peak_allocated_bytes": 2027722240,
+  "training_return_metrics": {
+    "metrics/precision(B)": 0.5685053927607653,
+    "metrics/recall(B)": 0.41924655034115316,
+    "metrics/mAP50(B)": 0.4431615909583032,
+    "metrics/mAP50-95(B)": 0.21543572846884804,
+    "fitness": 0.21543572846884804
+  },
+  "explicit_best_validation": {
+    "metrics/precision(B)": 0.5702088677577537,
+    "metrics/recall(B)": 0.42003192597107974,
+    "metrics/mAP50(B)": 0.443693737677867,
+    "metrics/mAP50-95(B)": 0.21606855254198276,
+    "fitness": 0.21606855254198276
+  },
+  "per_class": {
+    "D00": {
+      "precision": 0.5421089275929976,
+      "recall": 0.5,
+      "mAP50": 0.49768414814502016,
+      "mAP50_95": 0.2334161311957466
+    },
+    "D10": {
+      "precision": 0.5938162996304389,
+      "recall": 0.5561131496090005,
+      "mAP50": 0.594611101353535,
+      "mAP50_95": 0.2613564483748194
+    },
+    "D20": {
+      "precision": 0.6972147902011123,
+      "recall": 0.32989690721649484,
+      "mAP50": 0.3855749393081509,
+      "mAP50_95": 0.21558615662319455
+    },
+    "D40": {
+      "precision": 0.44769545360646623,
+      "recall": 0.29411764705882354,
+      "mAP50": 0.2969047619047619,
+      "mAP50_95": 0.15391547397417032
+    }
+  },
+  "best_pt": "/content/drive/MyDrive/TP1_LMD/stage6/results/training/yolov8n/weights/best.pt",
+  "last_pt": "/content/drive/MyDrive/TP1_LMD/stage6/results/training/yolov8n/weights/last.pt",
+  "results_csv": "/content/drive/MyDrive/TP1_LMD/stage6/results/training/yolov8n/results.csv",
+  "best_pt_sha256": "34439ac964e8ca81cf987d9046791c68d3647d2b1662e1be41da2e73fb2f1f6b",
+  "last_pt_sha256": "eefd8aaa7ac5bbbbcb4c3530c5baf20cd3130c6871f33935957f8af006cfc9fa"
+}

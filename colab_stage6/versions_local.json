@@ -1,0 +1,8 @@
+{
+  "python": "3.11.9",
+  "torch": "2.14.0+cpu",
+  "torchvision": "0.29.0",
+  "ultralytics_effective": "8.4.153",
+  "ultralytics_source": "C:\\TP1\\third_party\\ultralytics",
+  "note": "Local torch is CPU-only and is recorded for provenance. Both Colab experiments must use the same CUDA-enabled torch already present in the T4 runtime; preflight records its exact version."
+}

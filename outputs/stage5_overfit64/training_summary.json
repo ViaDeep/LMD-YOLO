@@ -1,0 +1,129 @@
+{
+  "training_seconds": 2443.520402431488,
+  "explicit_best_validation_seconds": 12.096643924713135,
+  "total_seconds": 2457.2840003967285,
+  "initial_structure": {
+    "backbone": "LeYOLO-Nano",
+    "mgconv_positions": [
+      21,
+      24
+    ],
+    "mgconv_groups": [
+      2,
+      2
+    ],
+    "head": "DetectDBB",
+    "dbb_count": 6,
+    "dbb_mode": "TRAIN multibranch",
+    "classes": [
+      "D00",
+      "D10",
+      "D20",
+      "D40"
+    ],
+    "strides": [
+      8,
+      16,
+      32
+    ],
+    "parameters": 3073884,
+    "gflops_640": 8.56617
+  },
+  "best_structure": {
+    "backbone": "LeYOLO-Nano",
+    "mgconv_positions": [
+      21,
+      24
+    ],
+    "mgconv_groups": [
+      2,
+      2
+    ],
+    "head": "DetectDBB",
+    "dbb_count": 6,
+    "dbb_mode": "TRAIN multibranch",
+    "classes": [
+      "D00",
+      "D10",
+      "D20",
+      "D40"
+    ],
+    "strides": [
+      8,
+      16,
+      32
+    ],
+    "parameters": 3073884,
+    "gflops_640": 8.56617
+  },
+  "training_return_metrics": {
+    "metrics/precision(B)": 0.9334979992250072,
+    "metrics/recall(B)": 0.4090555382638733,
+    "metrics/mAP50(B)": 0.5165468591261129,
+    "metrics/mAP50-95(B)": 0.3830612164243169,
+    "fitness": 0.3830612164243169
+  },
+  "best_validation_metrics": {
+    "metrics/precision(B)": 0.9334979992250072,
+    "metrics/recall(B)": 0.4090555382638733,
+    "metrics/mAP50(B)": 0.5165468591261129,
+    "metrics/mAP50-95(B)": 0.3830612164243169,
+    "fitness": 0.3830612164243169
+  },
+  "per_class": {
+    "D00": {
+      "precision": 0.8658475562409969,
+      "recall": 0.3877551020408163,
+      "mAP50": 0.48065679302577147,
+      "mAP50_95": 0.3262959975117471
+    },
+    "D10": {
+      "precision": 0.8818110743433609,
+      "recall": 0.4,
+      "mAP50": 0.46502794856602303,
+      "mAP50_95": 0.26368269338944195
+    },
+    "D20": {
+      "precision": 0.9863333663156711,
+      "recall": 0.5294117647058824,
+      "mAP50": 0.6999015526338834,
+      "mAP50_95": 0.6029157458390706
+    },
+    "D40": {
+      "precision": 1.0,
+      "recall": 0.31905528630879443,
+      "mAP50": 0.4206011422787739,
+      "mAP50_95": 0.33935042895700784
+    }
+  },
+  "best_checkpoint": "C:\\TP1\\runs\\detect\\lmd_stage5_overfit64\\weights\\best.pt",
+  "best_checkpoint_sha256": "d73761e38d9f90d2a0e79908099898d1e85aa9386ba32eaba4ed829c0b8f28cb",
+  "last_checkpoint": "C:\\TP1\\runs\\detect\\lmd_stage5_overfit64\\weights\\last.pt",
+  "results_csv": "C:\\TP1\\runs\\detect\\lmd_stage5_overfit64\\results.csv",
+  "prediction_images": [
+    "C:\\TP1\\outputs\\stage5_overfit64\\predictions\\China_Drone_000205_gt_vs_pred.jpg",
+    "C:\\TP1\\outputs\\stage5_overfit64\\predictions\\China_MotorBike_001059_gt_vs_pred.jpg",
+    "C:\\TP1\\outputs\\stage5_overfit64\\predictions\\China_MotorBike_000619_gt_vs_pred.jpg",
+    "C:\\TP1\\outputs\\stage5_overfit64\\predictions\\China_MotorBike_000407_gt_vs_pred.jpg",
+    "C:\\TP1\\outputs\\stage5_overfit64\\predictions\\China_MotorBike_001516_gt_vs_pred.jpg",
+    "C:\\TP1\\outputs\\stage5_overfit64\\predictions\\China_MotorBike_000495_gt_vs_pred.jpg",
+    "C:\\TP1\\outputs\\stage5_overfit64\\predictions\\China_MotorBike_001090_gt_vs_pred.jpg",
+    "C:\\TP1\\outputs\\stage5_overfit64\\predictions\\China_MotorBike_001350_gt_vs_pred.jpg"
+  ],
+  "configuration": {
+    "epochs": 50,
+    "imgsz": 640,
+    "batch": 8,
+    "seed": 20260923,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "lrf": 0.1,
+    "beta1_momentum_argument": 0.9,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "patience": 100,
+    "augmentations": "all geometric/photometric transforms, mosaic, mixup, cutmix and copy-paste disabled",
+    "train_split": "same 64 images",
+    "validation_split": "same 64 images"
+  }
+}

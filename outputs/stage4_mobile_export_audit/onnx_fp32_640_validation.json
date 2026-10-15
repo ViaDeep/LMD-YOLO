@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "configuration": {
+    "precision": "FP32",
+    "imgsz": 640,
+    "batch": 1,
+    "dynamic": false,
+    "simplify": false,
+    "nms": false,
+    "quantization": null
+  },
+  "source_checkpoint": "C:\\TP1\\runs\\detect\\leyolo_nano_mgconv_dbb_stage3_deploy\\weights\\best_deploy_fp32.pt",
+  "source_sha256_before": "07ac5b5ac8e1691739f69d32e8d2e8a17fa6761d2029b7febe9f2427edafc852",
+  "source_sha256_after": "07ac5b5ac8e1691739f69d32e8d2e8a17fa6761d2029b7febe9f2427edafc852",
+  "source_unchanged": true,
+  "copied_checkpoint": "C:\\TP1\\outputs\\stage4_mobile_export_audit\\onnx_fp32_640\\best_deploy_fp32_source_copy.pt",
+  "onnx_file": "C:\\TP1\\outputs\\stage4_mobile_export_audit\\onnx_fp32_640\\best_deploy_fp32_source_copy.onnx",
+  "onnx_bytes": 9214905,
+  "onnx_sha256": "a68e5c09d2d9c76f0259d9705727f14917f67f2a6dafcedbffbe86d8deed51b8",
+  "onnx_version": "1.23.0",
+  "onnxruntime_version": "1.30.0",
+  "ir_version": 8,
+  "opset_imports": {
+    "ai.onnx": 18
+  },
+  "checker": "PASS",
+  "graph_nodes": 284,
+  "operators": {
+    "Add": 15,
+    "Concat": 13,
+    "Constant": 29,
+    "Conv": 78,
+    "Div": 4,
+    "Erf": 2,
+    "Gather": 1,
+    "MaxPool": 3,
+    "Mul": 62,
+    "Reshape": 8,
+    "Resize": 2,
+    "Shape": 1,
+    "Sigmoid": 56,
+    "Slice": 2,
+    "Softmax": 1,
+    "Split": 4,
+    "Sub": 2,
+    "Transpose": 1
+  },
+  "domains": {
+    "ai.onnx": 284
+  },
+  "custom_operator_domains": {},
+  "inputs": [
+    {
+      "name": "images",
+      "shape": [
+        1,
+        3,
+        640,
+        640
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output0",
+      "shape": [
+        1,
+        8,
+        8400
+      ]
+    }
+  ],
+  "runtime": {
+    "providers_requested": [
+      "CPUExecutionProvider"
+    ],
+    "providers_active": [
+      "CPUExecutionProvider"
+    ],
+    "warnings": []
+  },
+  "test_image": "C:\\TP1\\data\\dataset\\images\\val\\China_Drone_000001.jpg",
+  "preprocessing": "OpenCV BGR->RGB, direct resize 640x640, NCHW FP32 / 255",
+  "comparison_pre_nms_decoded": {
+    "shape": [
+      1,
+      8,
+      8400
+    ],
+    "max_abs": 0.001190185546875,
+    "mean_abs": 1.7510343607606652e-05,
+    "max_rel_eps_1e-8": 0.004183507031092451,
+    "mean_rel_eps_1e-8": 9.703554710306208e-05,
+    "allclose_rtol_1e-4_atol_1e-5": true,
+    "allclose_rtol_1e-3_atol_1e-4": true
+  },
+  "structure_report_status": "PASS"
+}

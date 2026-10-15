@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "models": {
+    "yolov8n": {
+      "status": "PASS",
+      "rows": 1,
+      "seconds": 34.98237872123718,
+      "peak_allocated_bytes": 2002609664,
+      "best_pt": "/content/drive/MyDrive/TP1_LMD/stage6/results/smoke/yolov8n/weights/best.pt",
+      "last_pt": "/content/drive/MyDrive/TP1_LMD/stage6/results/smoke/yolov8n/weights/last.pt"
+    },
+    "lmd_yolo": {
+      "status": "PASS",
+      "rows": 1,
+      "seconds": 62.43178844451904,
+      "peak_allocated_bytes": 2802898944,
+      "best_pt": "/content/drive/MyDrive/TP1_LMD/stage6/results/smoke/lmd_yolo/weights/best.pt",
+      "last_pt": "/content/drive/MyDrive/TP1_LMD/stage6/results/smoke/lmd_yolo/weights/last.pt"
+    }
+  },
+  "batch": 16,
+  "config_sha256": "07f2d39e7f51bc22096bb22294a2abc4d7acc4bb0358ae76b0bff7f6421cafc3",
+  "dataset_manifest_sha256": "fced2d518eb4b559d4d890162a9738a129b4f31020944a1d35a9d7a31ec07abd",
+  "message": "Smoke passed. Long training remains a separate manual action."
+}

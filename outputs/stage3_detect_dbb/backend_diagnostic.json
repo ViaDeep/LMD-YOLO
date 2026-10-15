@@ -1,0 +1,447 @@
+{
+  "image": "C:\\TP1\\data\\dataset\\images\\val\\China_Drone_000001.jpg",
+  "backends": {
+    "mkldnn_off": {
+      "blocks": {
+        "P3_cv2": {
+          "max_abs": 9.5367431640625e-06,
+          "max_rel": 0.1322309374809265,
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P3_cv3": {
+          "max_abs": 1.1444091796875e-05,
+          "max_rel": 0.06553933024406433,
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_cv2": {
+          "max_abs": 8.344650268554688e-06,
+          "max_rel": 0.11442626267671585,
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_cv3": {
+          "max_abs": 1.33514404296875e-05,
+          "max_rel": 0.01550061535090208,
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_cv2": {
+          "max_abs": 1.9073486328125e-05,
+          "max_rel": 0.002157362876459956,
+          "shape": [
+            1,
+            64,
+            20,
+            20
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_cv3": {
+          "max_abs": 2.6941299438476562e-05,
+          "max_rel": 0.004149411339312792,
+          "shape": [
+            1,
+            64,
+            20,
+            20
+          ],
+          "failed_elements": 0,
+          "passed": true
+        }
+      },
+      "model": {
+        "P3_cv2": {
+          "max_abs": 1.9073486328125e-06,
+          "max_rel": 0.0028368793427944183,
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_cv2": {
+          "max_abs": 1.1920928955078125e-06,
+          "max_rel": 0.0039840638637542725,
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_cv2": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 0.00023940627579577267,
+          "shape": [
+            1,
+            64,
+            20,
+            20
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P3_cv3": {
+          "max_abs": 1.9073486328125e-06,
+          "max_rel": 2.0952018076059176e-07,
+          "shape": [
+            1,
+            4,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_cv3": {
+          "max_abs": 9.5367431640625e-07,
+          "max_rel": 2.3266548510036955e-07,
+          "shape": [
+            1,
+            4,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_cv3": {
+          "max_abs": 1.9073486328125e-06,
+          "max_rel": 2.212687206792907e-07,
+          "shape": [
+            1,
+            4,
+            20,
+            20
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "boxes_concat": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 0.0039840638637542725,
+          "shape": [
+            1,
+            64,
+            8400
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "scores_concat": {
+          "max_abs": 1.9073486328125e-06,
+          "max_rel": 2.3266548510036955e-07,
+          "shape": [
+            1,
+            4,
+            8400
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "decoded": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 2.0377057808218524e-05,
+          "shape": [
+            1,
+            8,
+            8400
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P3_feature": {
+          "max_abs": 0.0,
+          "max_rel": 0.0,
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_feature": {
+          "max_abs": 0.0,
+          "max_rel": 0.0,
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_feature": {
+          "max_abs": 0.0,
+          "max_rel": 0.0,
+          "shape": [
+            1,
+            256,
+            20,
+            20
+          ],
+          "failed_elements": 0,
+          "passed": true
+        }
+      },
+      "all_blocks_pass": true,
+      "full_model_pass": true
+    },
+    "mkldnn_on": {
+      "blocks": {
+        "P3_cv2": {
+          "max_abs": 2.193450927734375e-05,
+          "max_rel": 0.08220826089382172,
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P3_cv3": {
+          "max_abs": 2.47955322265625e-05,
+          "max_rel": 0.023277992382645607,
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_cv2": {
+          "max_abs": 2.47955322265625e-05,
+          "max_rel": 0.0337657704949379,
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_cv3": {
+          "max_abs": 3.24249267578125e-05,
+          "max_rel": 0.11714275181293488,
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_cv2": {
+          "max_abs": 9.5367431640625e-05,
+          "max_rel": 0.005491430871188641,
+          "shape": [
+            1,
+            64,
+            20,
+            20
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_cv3": {
+          "max_abs": 9.5367431640625e-05,
+          "max_rel": 0.02727147750556469,
+          "shape": [
+            1,
+            64,
+            20,
+            20
+          ],
+          "failed_elements": 1,
+          "passed": false
+        }
+      },
+      "model": {
+        "P3_cv2": {
+          "max_abs": 3.337860107421875e-06,
+          "max_rel": 0.026487408205866814,
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_cv2": {
+          "max_abs": 2.384185791015625e-06,
+          "max_rel": 0.003864505561068654,
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_cv2": {
+          "max_abs": 6.198883056640625e-06,
+          "max_rel": 0.0007140485104173422,
+          "shape": [
+            1,
+            64,
+            20,
+            20
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P3_cv3": {
+          "max_abs": 4.76837158203125e-06,
+          "max_rel": 4.7618965481888154e-07,
+          "shape": [
+            1,
+            4,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_cv3": {
+          "max_abs": 3.814697265625e-06,
+          "max_rel": 6.954624041100033e-07,
+          "shape": [
+            1,
+            4,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_cv3": {
+          "max_abs": 4.76837158203125e-06,
+          "max_rel": 7.273233677551616e-07,
+          "shape": [
+            1,
+            4,
+            20,
+            20
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "boxes_concat": {
+          "max_abs": 6.198883056640625e-06,
+          "max_rel": 0.026487408205866814,
+          "shape": [
+            1,
+            64,
+            8400
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "scores_concat": {
+          "max_abs": 4.76837158203125e-06,
+          "max_rel": 7.273233677551616e-07,
+          "shape": [
+            1,
+            4,
+            8400
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "decoded": {
+          "max_abs": 0.00030517578125,
+          "max_rel": 1.2093994882889092e-05,
+          "shape": [
+            1,
+            8,
+            8400
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P3_feature": {
+          "max_abs": 0.0,
+          "max_rel": 0.0,
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P4_feature": {
+          "max_abs": 0.0,
+          "max_rel": 0.0,
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "failed_elements": 0,
+          "passed": true
+        },
+        "P5_feature": {
+          "max_abs": 0.0,
+          "max_rel": 0.0,
+          "shape": [
+            1,
+            256,
+            20,
+            20
+          ],
+          "failed_elements": 0,
+          "passed": true
+        }
+      },
+      "all_blocks_pass": false,
+      "full_model_pass": true
+    }
+  }
+}

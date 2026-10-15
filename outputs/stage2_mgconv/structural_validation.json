@@ -1,0 +1,71 @@
+{
+  "yaml": "models\\yolov8n_leyolo_nano_mgconv_stage2.yaml",
+  "parameters": 2266204,
+  "gflops_640": 6.165709,
+  "delta_parameters_vs_stage1": -71296,
+  "delta_gflops_640_vs_stage1": -0.09175,
+  "classes": [
+    "D00",
+    "D10",
+    "D20",
+    "D40"
+  ],
+  "detect_module": "Detect",
+  "strides": [
+    8,
+    16,
+    32
+  ],
+  "features": {
+    "p3": [
+      1,
+      64,
+      80,
+      80
+    ],
+    "p4": [
+      1,
+      128,
+      40,
+      40
+    ],
+    "p5": [
+      1,
+      256,
+      20,
+      20
+    ]
+  },
+  "residual_branch_shapes": {
+    "21": {
+      "main": [
+        1,
+        64,
+        40,
+        40
+      ],
+      "shortcut": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    "24": {
+      "main": [
+        1,
+        128,
+        20,
+        20
+      ],
+      "shortcut": [
+        1,
+        128,
+        20,
+        20
+      ]
+    }
+  },
+  "forward_1x3x640x640": "PASS",
+  "matches_experimental_B": true
+}

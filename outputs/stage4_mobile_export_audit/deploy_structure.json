@@ -1,0 +1,206 @@
+{
+  "status": "PASS",
+  "checkpoint": "C:\\TP1\\runs\\detect\\leyolo_nano_mgconv_dbb_stage3_deploy\\weights\\best_deploy_fp32.pt",
+  "checkpoint_bytes": 9453763,
+  "checkpoint_sha256": "07ac5b5ac8e1691739f69d32e8d2e8a17fa6761d2029b7febe9f2427edafc852",
+  "ultralytics_version": "8.4.153",
+  "ultralytics_path": "C:\\TP1\\third_party\\ultralytics\\__init__.py",
+  "torch_version": "2.14.0+cpu",
+  "dtype": "torch.float32",
+  "parameters": 2265820,
+  "gflops_640": 6.157107,
+  "head_type": "ultralytics.nn.modules.detect_dbb.DetectDBB",
+  "classes": {
+    "0": "D00",
+    "1": "D10",
+    "2": "D20",
+    "3": "D40"
+  },
+  "strides": [
+    8,
+    16,
+    32
+  ],
+  "pre_nms_output_shape": [
+    1,
+    8,
+    8400
+  ],
+  "dbb": {
+    "count": 6,
+    "all_reparameterized": true,
+    "training_branches_present": false,
+    "effective_children": [
+      {
+        "reparam_type": "Conv2d",
+        "kernel": [
+          3,
+          3
+        ],
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "groups": 1,
+        "nonlinearity": "SiLU"
+      },
+      {
+        "reparam_type": "Conv2d",
+        "kernel": [
+          3,
+          3
+        ],
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "groups": 1,
+        "nonlinearity": "SiLU"
+      },
+      {
+        "reparam_type": "Conv2d",
+        "kernel": [
+          3,
+          3
+        ],
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "groups": 1,
+        "nonlinearity": "SiLU"
+      },
+      {
+        "reparam_type": "Conv2d",
+        "kernel": [
+          3,
+          3
+        ],
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "groups": 1,
+        "nonlinearity": "SiLU"
+      },
+      {
+        "reparam_type": "Conv2d",
+        "kernel": [
+          3,
+          3
+        ],
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "groups": 1,
+        "nonlinearity": "SiLU"
+      },
+      {
+        "reparam_type": "Conv2d",
+        "kernel": [
+          3,
+          3
+        ],
+        "stride": [
+          1,
+          1
+        ],
+        "padding": [
+          1,
+          1
+        ],
+        "groups": 1,
+        "nonlinearity": "SiLU"
+      }
+    ]
+  },
+  "custom_modules": {
+    "MGConv": 2,
+    "LeYOLOConv": 27,
+    "LeYOLOInvertedBottleneck": 12,
+    "DetectDBB": 1,
+    "DiverseBranchBlock": 6
+  },
+  "mgconv_effective_ops": [
+    {
+      "main": [
+        "Conv2d",
+        "BatchNorm2d",
+        "GELU"
+      ],
+      "main_groups": 2,
+      "shortcut": "Conv2d",
+      "merge": "Add"
+    },
+    {
+      "main": [
+        "Conv2d",
+        "BatchNorm2d",
+        "GELU"
+      ],
+      "main_groups": 2,
+      "shortcut": "Conv2d",
+      "merge": "Add"
+    }
+  ],
+  "leyolo_effective_ops": {
+    "conv_blocks": [
+      "Conv2d",
+      "BatchNorm2d",
+      "SiLU/ReLU6/GELU/ELU/Hardswish"
+    ],
+    "bottlenecks": [
+      "pointwise Conv",
+      "depthwise Conv",
+      "pointwise Conv",
+      "BatchNorm",
+      "optional Add"
+    ],
+    "observed_activations": {
+      "GELU": 2,
+      "SiLU": 25
+    },
+    "observed_conv_groups": [
+      1,
+      2,
+      16,
+      96,
+      192,
+      576
+    ]
+  },
+  "all_project_ultralytics_module_types": {
+    "ultralytics.nn.modules.block.Bottleneck": 4,
+    "ultralytics.nn.modules.block.C2f": 4,
+    "ultralytics.nn.modules.block.DFL": 1,
+    "ultralytics.nn.modules.block.SPPF": 1,
+    "ultralytics.nn.modules.conv.Concat": 4,
+    "ultralytics.nn.modules.conv.Conv": 24,
+    "ultralytics.nn.modules.detect_dbb.DetectDBB": 1,
+    "ultralytics.nn.modules.diverse_branch_block.DiverseBranchBlock": 6,
+    "ultralytics.nn.modules.leyolo.LeYOLOConv": 27,
+    "ultralytics.nn.modules.leyolo.LeYOLOInvertedBottleneck": 12,
+    "ultralytics.nn.modules.mg_conv.MGConv": 2
+  }
+}

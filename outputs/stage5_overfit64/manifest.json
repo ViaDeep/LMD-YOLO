@@ -1,0 +1,898 @@
+[
+  {
+    "index": 1,
+    "image": "China_Drone_000205.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000205.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000205.txt",
+    "image_sha256": "d1fca0bd34927bc920d9b5a3e324d4cd5723f35805c0720fc651da1249ef977d",
+    "label_sha256": "28dd06586dc44cc031185263aa160bb3725581fa0a97be5cb242e23c94320014",
+    "objects": {
+      "D00": 2,
+      "D10": 0,
+      "D20": 1,
+      "D40": 1
+    }
+  },
+  {
+    "index": 2,
+    "image": "China_MotorBike_000407.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000407.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000407.txt",
+    "image_sha256": "9e4c53be7738b8553557e538d0c9e4b92a7b0172d6f588813f5129cd2f86e11f",
+    "label_sha256": "094d0ede34288a1ec9193391b78ef18690d1af77cce4eed37890a7058f204a0a",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 2
+    }
+  },
+  {
+    "index": 3,
+    "image": "China_MotorBike_001059.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001059.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001059.txt",
+    "image_sha256": "79d4ce311e2ce3cb0ef4e515532a3353a4793336b7ff23d885c3309c2f0a091b",
+    "label_sha256": "0bdc000c32f8ef76f71ff15960cfb06152e7abf24957a2984db923cac3f3c186",
+    "objects": {
+      "D00": 4,
+      "D10": 4,
+      "D20": 1,
+      "D40": 3
+    }
+  },
+  {
+    "index": 4,
+    "image": "China_MotorBike_000619.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000619.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000619.txt",
+    "image_sha256": "2174e65c32c140ff923296427b9a544ba2667d4ef62ea7ad13cfb78ccad912d7",
+    "label_sha256": "8b31aa39cd0231fbb1d07a3aa8bee43361c30d8ac683a464c99dc23b76e0f48b",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 2,
+      "D40": 1
+    }
+  },
+  {
+    "index": 5,
+    "image": "China_MotorBike_001516.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001516.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001516.txt",
+    "image_sha256": "7701f3960d92943bff6178252935950ea46f6a600515e2dc7c5a7ac5c6ac982f",
+    "label_sha256": "1092f95fe702cf92d888b6940681ccddbf637bd66f948262079b2d732fbfa7c0",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 1
+    }
+  },
+  {
+    "index": 6,
+    "image": "China_MotorBike_000495.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000495.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000495.txt",
+    "image_sha256": "6ecef2e6db450cd053da3e38d0a647b3028cadcbb24ef41110781f76078d6382",
+    "label_sha256": "98811d3844036b02a04f054b06ec1b3f9e26f52d220f3b0108c5697fbdc0860f",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 2,
+      "D40": 1
+    }
+  },
+  {
+    "index": 7,
+    "image": "China_MotorBike_001090.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001090.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001090.txt",
+    "image_sha256": "4bd8d59ef52bd4e5ba9fc9029b19bf7c6873c5d68ec1e681ac2d9eb184ed8f0f",
+    "label_sha256": "9a4298346f2f9b12d6ad15656e785c3a17e8c6083371576f084445cedd9a8123",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 2,
+      "D40": 1
+    }
+  },
+  {
+    "index": 8,
+    "image": "China_MotorBike_001350.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001350.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001350.txt",
+    "image_sha256": "9adf57b58f36c6fee6a7d53eda579bfbb88491fff278dd8a54e01ec4a0629e0d",
+    "label_sha256": "4c0f900d78807e107564ad6c9a86136d4db6462666cd3944adf412b5ffffc20e",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 2
+    }
+  },
+  {
+    "index": 9,
+    "image": "China_MotorBike_000138.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000138.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000138.txt",
+    "image_sha256": "740feccded27c59cb611bcafdb1df76ef7b902482b14280af641ce798a949ebb",
+    "label_sha256": "0ff87384072d11a95359ac5766554c5868a8bb726369d123a4feda60d5b0940e",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 1
+    }
+  },
+  {
+    "index": 10,
+    "image": "China_MotorBike_000408.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000408.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000408.txt",
+    "image_sha256": "995663612711d456fa52a580609c28be0257258bbf9da980e62c96a20965f1ac",
+    "label_sha256": "f04c57cd5e5d88a050e42def20a6295c4ccbfe535a646b8e1d4f3466970d0e0e",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 1
+    }
+  },
+  {
+    "index": 11,
+    "image": "China_Drone_001773.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_001773.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_001773.txt",
+    "image_sha256": "24abf01fc9d8a04cf4c6656f3dd095c7b120281368f953c090748c8cdf7db265",
+    "label_sha256": "51208e085181d5e2ed26be252f021d97c8622a114345e06495fa81c3206c432c",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 2
+    }
+  },
+  {
+    "index": 12,
+    "image": "China_MotorBike_000736.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000736.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000736.txt",
+    "image_sha256": "4b50b2a8a26a0c7d7bb14da254438fb4ad92a6e1eb21fcae037b440449a9b8a9",
+    "label_sha256": "f77e71b86b1a2a5372713b7bc8d30ffcabdf5c6981f7dd30abe32b4457b0ffeb",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 2,
+      "D40": 1
+    }
+  },
+  {
+    "index": 13,
+    "image": "China_MotorBike_000188.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000188.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000188.txt",
+    "image_sha256": "35f375bcfeb9c448512cdf26ece2b93d00de115d5be4d8a5e4d6de45b48ca5cc",
+    "label_sha256": "f091be63e7cd77bc186babbb4cb2c4354104eebc848d39bdaf5d87e8ddf01c90",
+    "objects": {
+      "D00": 1,
+      "D10": 2,
+      "D20": 0,
+      "D40": 3
+    }
+  },
+  {
+    "index": 14,
+    "image": "China_MotorBike_001460.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001460.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001460.txt",
+    "image_sha256": "d693319f5442e675814a505934a524126513de4c228d2f82b8873a4328699275",
+    "label_sha256": "924027412788a4a0412d312fae10163286915d82b19a14abf3f686ae65c0a9bb",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 1
+    }
+  },
+  {
+    "index": 15,
+    "image": "China_Drone_001555.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_001555.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_001555.txt",
+    "image_sha256": "525af07a721e014db051a4519f5ac940add27253093349c638ff2abcf909f7a4",
+    "label_sha256": "557c2d991373296afa30d4d21f8750627deb7eed36ad42dbdeb773ae00d33e3b",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 1
+    }
+  },
+  {
+    "index": 16,
+    "image": "China_MotorBike_001876.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001876.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001876.txt",
+    "image_sha256": "b2925a3cc7c601d06c6ce88bd6588aeb140c83ac03c09d3bce4ad66769b96bc6",
+    "label_sha256": "d1053c121c019fd82ceeadc8f1f04f33d12f87b323520e775ca0082624f52084",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 2
+    }
+  },
+  {
+    "index": 17,
+    "image": "China_MotorBike_000004.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000004.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000004.txt",
+    "image_sha256": "ad29bc20587b1e674943fd200db4d6e039b9472260c39ab854f37bb792aa1320",
+    "label_sha256": "e36c126e7a6292859cf5c3c392fd40b02c24d2cddecc0633d4737732610cdb79",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 1
+    }
+  },
+  {
+    "index": 18,
+    "image": "China_MotorBike_000841.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000841.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000841.txt",
+    "image_sha256": "ed444a63a7f1cd457065b764f3a3681ad9bd4c6895a15f43760744e22140b3c9",
+    "label_sha256": "f4bea6154660733b231ef201c862712125fb8af45bc7c4f9a1b57cbc186f80c2",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 2
+    }
+  },
+  {
+    "index": 19,
+    "image": "China_MotorBike_000651.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000651.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000651.txt",
+    "image_sha256": "16cafbb9978f8201e67994f8b564c7bb686109c4813aa0fd9a19770074802a21",
+    "label_sha256": "14ca4372ba1d7c88f5bc7323db9c88d072ca7bd1af829ac392e4041f3edf11dd",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 2
+    }
+  },
+  {
+    "index": 20,
+    "image": "China_MotorBike_001038.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001038.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001038.txt",
+    "image_sha256": "74741de7b58548a0f964b6217dab76d85fb6f84565d795c936bb615578ee0999",
+    "label_sha256": "e0f77eff45dec8090840c95c01f6fe46a25a9efbc1d977f89c28fbf631e0ca40",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 2,
+      "D40": 1
+    }
+  },
+  {
+    "index": 21,
+    "image": "China_MotorBike_001550.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001550.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001550.txt",
+    "image_sha256": "66d56d8ce57999b84b4f519e87bad104d8734826dea892cf4a84c714fa2d4db7",
+    "label_sha256": "e895d2c87a7a1ea6cf6555268724cb6c8706105336251aeea90813edf61f6385",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 2,
+      "D40": 1
+    }
+  },
+  {
+    "index": 22,
+    "image": "China_Drone_002372.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_002372.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_002372.txt",
+    "image_sha256": "ea5c1c4a18144296543940e24194fe3bf789fc0a1e3e59bc3bf81e8c1b91be00",
+    "label_sha256": "57c43101360b25b66f5d5292f99d2276274ca216412bcd49393c8d1c757c5c5c",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 1
+    }
+  },
+  {
+    "index": 23,
+    "image": "China_Drone_000695.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000695.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000695.txt",
+    "image_sha256": "f7a7c4752a1480617d07fc53745444913c389fca836f3d05edc293ab0e33c5dc",
+    "label_sha256": "2f344758ea75b80e58b51abbd502fdc2e8df66e0a4230d56029036ebf4c082a8",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 1,
+      "D40": 1
+    }
+  },
+  {
+    "index": 24,
+    "image": "China_MotorBike_000692.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000692.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000692.txt",
+    "image_sha256": "9ca1f3cabcb913de26da3af61201090b5dfb21ecbb1eba967d6d3b66d7f2dc3e",
+    "label_sha256": "1e765bf9ca1d7effaca6bb13067aa98b5ecfaf771f068eeabc8604d51c0e092e",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 0,
+      "D40": 1
+    }
+  },
+  {
+    "index": 25,
+    "image": "China_MotorBike_001112.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001112.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001112.txt",
+    "image_sha256": "bf542c7adfbe555913cb647725eef3612f1b59f3b0e11e3260ffccaecd74a7e7",
+    "label_sha256": "52950f4dc43df592d2c3cd971e1c86ae198ebe52f5339b64d8f8adb4b32bfc2e",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 26,
+    "image": "China_Drone_000271.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000271.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000271.txt",
+    "image_sha256": "a100cd090b06f908c8023b625bbe89dbc305002841fb39e0099a0f51a939263d",
+    "label_sha256": "7fd5d628f345d91306db42c7fe2bde17284f467083a891624b48e45e77212507",
+    "objects": {
+      "D00": 0,
+      "D10": 1,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 27,
+    "image": "China_MotorBike_000531.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000531.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000531.txt",
+    "image_sha256": "2e22d8b85b5e1d25c21e449bd7b12ec4386063da004967bed0d297879122e79d",
+    "label_sha256": "1ce847f20ded0c020a8df81b986ee4c00f292d9a124788d0b38eb8b76182bc7c",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 28,
+    "image": "China_MotorBike_000447.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000447.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000447.txt",
+    "image_sha256": "c5e93707b6af9eeaa948a0ea18b42f3a7b0b2d72aa846e1cdec73b56f802edc5",
+    "label_sha256": "7e675033ee8581bdec21a9925e9fcd1dbe5cd709f1f150462d6f10fd2bacab2d",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 29,
+    "image": "China_Drone_001917.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_001917.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_001917.txt",
+    "image_sha256": "db343d16966565aa21d54bd6242f0cbc639ed9cf798254ab4649ac47068d4268",
+    "label_sha256": "8feaca787bd5d47f7ef33b8f2e3cd354d4fa24be1bfce1f83c62ec221dfdc800",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 30,
+    "image": "China_Drone_002309.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_002309.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_002309.txt",
+    "image_sha256": "3b87620652443bc8ef981f5571736e52843b4d0911806a988d2437d1c1818361",
+    "label_sha256": "8f534911f92cd741ba3eb4ef8674b0418813f96e9c6e94464f01f63f88c4f5a3",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 31,
+    "image": "China_MotorBike_000126.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000126.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000126.txt",
+    "image_sha256": "fe85274e5c88c511562b747fd9d06bb7d55601227df3983b305bccac5fc7c326",
+    "label_sha256": "18a51535b3901d6dbe04fc069a28d80ea47e3a92e18ca7546a4d19f8720e0e86",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 32,
+    "image": "China_Drone_000588.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000588.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000588.txt",
+    "image_sha256": "d1914507e9fbbc0e88d25ad1133a08dd853e560421f9f851df39ebf9a8ffe6e2",
+    "label_sha256": "d9e728b588453bea9e5f56cadb9ed9ce8a03dd7d8da2fb7f54ef50e2964eb41b",
+    "objects": {
+      "D00": 1,
+      "D10": 1,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 33,
+    "image": "China_Drone_000321.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000321.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000321.txt",
+    "image_sha256": "5a2148fb460ea47fdb81d2570413a785a1cc7b8e9a655ca8f435e27c7196b5ea",
+    "label_sha256": "be799754ce903c20a14d074676d9259ed4dc95d4f7ef147059dd40c099a46c22",
+    "objects": {
+      "D00": 3,
+      "D10": 1,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 34,
+    "image": "China_MotorBike_001325.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001325.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001325.txt",
+    "image_sha256": "1a1b8484e51f4043cb1879c2131ae7d031ac0ee6ebe4ed62a4467443179f5c57",
+    "label_sha256": "05aff958de2a897a1d2738052665a5608fe22c6e7b5fbe17f5d363e42ab482e8",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 2,
+      "D40": 0
+    }
+  },
+  {
+    "index": 35,
+    "image": "China_MotorBike_001898.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001898.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001898.txt",
+    "image_sha256": "39ab143d184e1e05177d87c0a331cd57c19a4394d51c0e127023f43a1dd42f78",
+    "label_sha256": "65077aaaffed8c96bc3c0e9e7594e4e7b6fa9704c1b3e1439f6ef845d2686dac",
+    "objects": {
+      "D00": 0,
+      "D10": 0,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 36,
+    "image": "China_MotorBike_000739.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000739.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000739.txt",
+    "image_sha256": "4c8de251530b31985af22a9129308ab63989ba441c1b17e74e36c209d9de15b4",
+    "label_sha256": "369b8cbb4d5a9ba3a4cfeb157413fc15457efd188f36400be8b47b8032e6395a",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 2,
+      "D40": 0
+    }
+  },
+  {
+    "index": 37,
+    "image": "China_MotorBike_000341.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000341.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000341.txt",
+    "image_sha256": "90ec68029abea0a0810c357e8774bcf92df115a2a05079f71874364fb64095d3",
+    "label_sha256": "a16ea6cc2d7b9429ec7932d3eb3a1a4ee9208ab32992fff4cefab4fbe2c394e5",
+    "objects": {
+      "D00": 1,
+      "D10": 1,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 38,
+    "image": "China_Drone_000314.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000314.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000314.txt",
+    "image_sha256": "face4593ead1b3e9ce0e0c220e630623e960a67edcfcf195c28d3c72a720e4fb",
+    "label_sha256": "64a8e9924346d9f414ece8ff19151e76caa26f954d1a65802ec2582f3069d3c0",
+    "objects": {
+      "D00": 3,
+      "D10": 0,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 39,
+    "image": "China_MotorBike_000906.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000906.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000906.txt",
+    "image_sha256": "8f1590b57ace81f420b04ff67379e2e3c9ddd0dbf710fd85f044eeb864866fa2",
+    "label_sha256": "7a2767c1d5de6c0e1bde19cf944b9a779deb2fead30a8d12b6f9124e23fdecf1",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 2,
+      "D40": 0
+    }
+  },
+  {
+    "index": 40,
+    "image": "China_MotorBike_000558.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000558.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000558.txt",
+    "image_sha256": "27749f633b28a7d997c3a8c6d9bb09fdff94d2b720055be38c0d0579a0b0fdbe",
+    "label_sha256": "f98eb1344bb841381517ba6f3dbe5ebff877534d5e2eb808d17c2223d83c7dd3",
+    "objects": {
+      "D00": 2,
+      "D10": 1,
+      "D20": 1,
+      "D40": 0
+    }
+  },
+  {
+    "index": 41,
+    "image": "China_MotorBike_000684.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000684.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000684.txt",
+    "image_sha256": "06514b64d35ff994c478d3797e25180cf34556f898514d90734356ff81c5d19f",
+    "label_sha256": "d7ccc1f8a896291887b1eb08a59b6eaead36857393a672907d2be42a875435c7",
+    "objects": {
+      "D00": 1,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 42,
+    "image": "China_MotorBike_001827.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001827.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001827.txt",
+    "image_sha256": "577cfb83174b2fb4909e5deb7be966d242cd5cd81bf873f81bbcd84806322eab",
+    "label_sha256": "911b41a2183a3ee64537bd403fe6fb8d51ae65ad414b968526681bd64f502cdd",
+    "objects": {
+      "D00": 1,
+      "D10": 3,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 43,
+    "image": "China_MotorBike_001769.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_001769.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_001769.txt",
+    "image_sha256": "9fcbf5800ae0c8308cdc62cc400ac0fe4cdfe98a3cf6b2c1764876241a8a1726",
+    "label_sha256": "82c489290ecadaf29deceaa7d8adb1e3c8bef8cf28cecf98c1227f6d492d67c5",
+    "objects": {
+      "D00": 2,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 44,
+    "image": "China_Drone_001820.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_001820.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_001820.txt",
+    "image_sha256": "9954e0f65cd8dcee1064cb3a5248143e39597bb04c67fd5a922267cd58201b5a",
+    "label_sha256": "f75877552ceacc018a8563047dc9eff395a6948e458c2f32f3ac1bfdeff893a9",
+    "objects": {
+      "D00": 0,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 45,
+    "image": "China_Drone_000018.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000018.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000018.txt",
+    "image_sha256": "6b4f7feba656b2c77b75668457b781f839dff602272d2d9527a2ad22308e01cd",
+    "label_sha256": "6c0507926195579a06c6e94f857d0be52f7861009d5d877c67a2154ed3626b58",
+    "objects": {
+      "D00": 0,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 46,
+    "image": "China_Drone_000977.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000977.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000977.txt",
+    "image_sha256": "9efda825fd4e72485167d25ee82818be1800ba9f9676580c2edef7d06a662cb1",
+    "label_sha256": "ebb2ae18fe809a9ca34f32d986470c6441cf5d388663e69f171c89a0a2aea7e9",
+    "objects": {
+      "D00": 0,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 47,
+    "image": "China_MotorBike_000198.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000198.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000198.txt",
+    "image_sha256": "258beb2288cb67da68db92f24a197ae553f39e48db4fcb3fecb41a1359ba6ff7",
+    "label_sha256": "c4ae042866b68aa45f17ca7772fb1da7ea54e9250e37114deda85d1ffc5c074b",
+    "objects": {
+      "D00": 0,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 48,
+    "image": "China_Drone_002079.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_002079.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_002079.txt",
+    "image_sha256": "b88817017097098222a3fa93f36c3761c3f866aa1ae88890e413926e42c45c94",
+    "label_sha256": "076d222c89a71f640b9e72a6dd37c7ae8c55fc9877fd8ff667e943bdc998cf85",
+    "objects": {
+      "D00": 0,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 49,
+    "image": "China_Drone_002026.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_002026.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_002026.txt",
+    "image_sha256": "0baf866b80dd879f1d2889cafe36708be50f9279451062dc32aabcc378639ed7",
+    "label_sha256": "7509b0b675dd3818f6ee2c8f948a101ca70bd3f34e372eb65315a0cbc6653340",
+    "objects": {
+      "D00": 0,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 50,
+    "image": "China_Drone_001508.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_001508.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_001508.txt",
+    "image_sha256": "c4c453b5b7e11e59f89729659be9a7097afdc24dfab2d7450c547d1393c784ea",
+    "label_sha256": "5960d0724797c2533d1ade82e4ae7a3f70fe9d895873b3959d2d19b566c92afd",
+    "objects": {
+      "D00": 0,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 51,
+    "image": "China_Drone_000686.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000686.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000686.txt",
+    "image_sha256": "dc67368fe7c5c7b4d2a8c0f3f60da7865c125bfdd84fdf81e3920d09f19336b5",
+    "label_sha256": "1e1a9587fe982e6cb285c6457593c40518c4fe2a4dffcfcd4a0b8b19871b0ed8",
+    "objects": {
+      "D00": 4,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 52,
+    "image": "China_Drone_001898.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_001898.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_001898.txt",
+    "image_sha256": "a21bf9928c838490da95b2872e8fd886253a90f489d76436bd879ffeebadf013",
+    "label_sha256": "f618fa58245125ec16408785c7b21f8edfdddf8ea405a59465e14e4c1562e6ed",
+    "objects": {
+      "D00": 0,
+      "D10": 1,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 53,
+    "image": "China_Drone_000342.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000342.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000342.txt",
+    "image_sha256": "3c1b3948e601be93f6239f2ba94785a6f6175656b8f84eaa4de7f17dc8abc8c4",
+    "label_sha256": "4739bbb4aa8837beca7870f6064377a8889494d1ed65a1e08919079548df50e0",
+    "objects": {
+      "D00": 2,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 54,
+    "image": "China_Drone_000897.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000897.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000897.txt",
+    "image_sha256": "6f04686aa48eb6faacb6a08275c02dbd2de1bff8f43115a4b79845d800170352",
+    "label_sha256": "da3768595e6c28507a95f15d8646f64aadfab36c7b673f6bdd463145666770ff",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 55,
+    "image": "China_Drone_001863.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_001863.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_001863.txt",
+    "image_sha256": "9b2bdcd1dd92eca64aeb28c73e98bcde7e455702923b1e65712bdd5f2aac1015",
+    "label_sha256": "f839adf652b47f6815e9fc59cc9dba1bba24ede1b51693b6d9485c1f1c389cec",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 56,
+    "image": "China_MotorBike_000211.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000211.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000211.txt",
+    "image_sha256": "7478c092fd57aa4fb9e79a75ccbc87e60dc3a9ac46cf5ffd63cbd30335f32523",
+    "label_sha256": "590591eb374124ca6400ee3be5bfb89d89b6e73ad503382da12a05810da56de2",
+    "objects": {
+      "D00": 2,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 57,
+    "image": "China_Drone_000376.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_000376.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_000376.txt",
+    "image_sha256": "ce63e49d07e6e1a2fc61ea53f47f7d744f4a984996a63fa33dae493b7e9594f3",
+    "label_sha256": "352a342fe7abc098724c21cfc417959d0e3688c154e034776cb9118911417681",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 58,
+    "image": "China_MotorBike_000292.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000292.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000292.txt",
+    "image_sha256": "06a1528a6dd75a00791e29ef6137df9c34fa902b11b78fee26eb462ee7b8254a",
+    "label_sha256": "81b5c9b6b3d8c3f066de0698931192f3db061e390784a33cbe67ae120695204f",
+    "objects": {
+      "D00": 2,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 59,
+    "image": "China_MotorBike_000413.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000413.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000413.txt",
+    "image_sha256": "38b53a3534ff7517de98bdc5fa047028f021c40d1365605de0b469b340420c72",
+    "label_sha256": "c1bd2fe1a8d27868162552c51fcbf6a6f0b9383ad554dbfd9e6bdc1c8cf56d44",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 60,
+    "image": "China_Drone_001299.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_001299.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_001299.txt",
+    "image_sha256": "6720694774d5fffb3efa9c7fd75a6321294897ca72f1807ad4c5f9b8d4e9ca6d",
+    "label_sha256": "e20c7b1fb8bce1c869483e7595684d62ab9ab0b12f6dce9545489b1765bc77fe",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 61,
+    "image": "China_MotorBike_000191.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000191.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000191.txt",
+    "image_sha256": "a1b1b8223ae528780da6be111e27ecdbe52180225bd18f9d21363ee178adecd7",
+    "label_sha256": "1089d3e7c805fa356c805a65cea9e96c5c7885f9a4d5f448540f2ec15916b52c",
+    "objects": {
+      "D00": 2,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 62,
+    "image": "China_MotorBike_000290.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_MotorBike_000290.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_MotorBike_000290.txt",
+    "image_sha256": "934832fe18beeac3e41d7f85ebc2a5755abba773a219d68878aa55a6577a0b75",
+    "label_sha256": "4c2e850e4903ccf298d718972c75ba331cce8ea16d18b6e7f243433c8f293010",
+    "objects": {
+      "D00": 2,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 63,
+    "image": "China_Drone_002158.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_002158.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_002158.txt",
+    "image_sha256": "a7591fcabc26be282bdced7026903cf731db866c4079cfe304dbf329f5cf8f5d",
+    "label_sha256": "93bfeec144efae7cff76da52f3346465651d42ad54e57e09475a3410890c7a04",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  },
+  {
+    "index": 64,
+    "image": "China_Drone_001085.jpg",
+    "source_image": "C:\\TP1\\data\\dataset\\images\\train\\China_Drone_001085.jpg",
+    "source_label": "C:\\TP1\\data\\dataset\\labels\\train\\China_Drone_001085.txt",
+    "image_sha256": "969144ec9c95a7d7fdf8006cdabf922c4b3528b18ea5d6e314c2b3dbe5ca5921",
+    "label_sha256": "63d06ca152f7d91de0df8395a51d19d0be51b7c94671fd80dc218df5ad56ffd5",
+    "objects": {
+      "D00": 1,
+      "D10": 0,
+      "D20": 0,
+      "D40": 0
+    }
+  }
+]

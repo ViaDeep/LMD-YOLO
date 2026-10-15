@@ -1,0 +1,66 @@
+{
+  "seed": 20260923,
+  "selection": "24 unique images containing D40, then 16 D20, 12 D10, 12 D00; seeded shuffle without replacement",
+  "source_split": "train only",
+  "train_and_evaluation_are_identical": true,
+  "images": 64,
+  "objects_per_class": {
+    "D00": 49,
+    "D10": 25,
+    "D20": 34,
+    "D40": 34
+  },
+  "images_containing_class": {
+    "D00": 31,
+    "D10": 19,
+    "D20": 25,
+    "D40": 24
+  },
+  "all_images_exist": true,
+  "all_labels_exist": true,
+  "labels_valid": true,
+  "source_yaml": "C:\\TP1\\models\\yolov8n_leyolo_nano_mgconv_detect_dbb_stage3.yaml",
+  "source_checkpoint": "C:\\TP1\\runs\\detect\\leyolo_nano_mgconv_dbb_stage3_smoke\\weights\\best.pt",
+  "source_checkpoint_sha256": "6ae788c05d9bc66ef1a600e0fcd895455a8f115c97797e5b49b48a528b2050a4",
+  "structure": {
+    "backbone": "LeYOLO-Nano",
+    "mgconv_positions": [
+      21,
+      24
+    ],
+    "mgconv_groups": [
+      2,
+      2
+    ],
+    "head": "DetectDBB",
+    "dbb_count": 6,
+    "dbb_mode": "TRAIN multibranch",
+    "classes": [
+      "D00",
+      "D10",
+      "D20",
+      "D40"
+    ],
+    "strides": [
+      8,
+      16,
+      32
+    ],
+    "parameters": 3073884,
+    "gflops_640": 8.56617
+  },
+  "fixed_visual_sample": [
+    "China_Drone_000205.jpg",
+    "China_MotorBike_001059.jpg",
+    "China_MotorBike_000619.jpg",
+    "China_MotorBike_000407.jpg",
+    "China_MotorBike_001516.jpg",
+    "China_MotorBike_000495.jpg",
+    "China_MotorBike_001090.jpg",
+    "China_MotorBike_001350.jpg",
+    "China_MotorBike_000138.jpg",
+    "China_MotorBike_000408.jpg",
+    "China_Drone_001773.jpg",
+    "China_MotorBike_000736.jpg"
+  ]
+}

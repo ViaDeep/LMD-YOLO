@@ -1,0 +1,78 @@
+# Stage 6 — YOLOv8n vs LMD_YOLO en Colab T4
+
+Este paquete es autocontenido y separado del proyecto canónico. No contiene
+runs antiguos, ONNX, artefactos DEPLOY, mobile/NNAPI, `.venv` ni overfit64.
+
+## Decisión de inicialización
+
+Ambos modelos parten **desde cero** y reciben la misma seed (`42`). Usar
+`yolov8n.pt` daría pretraining COCO solo al baseline; usar el checkpoint LMD
+de smoke introduciría una época de exposición a RDD2022 solo para LMD. No
+existe un checkpoint externo equivalente para LeYOLO/MGConv/DetectDBB.
+
+Los dos checkpoints se incluyen bajo `reference_weights/` únicamente para
+auditoría/procedencia. `scripts/stage6.py` construye siempre desde YAML y no
+acepta un argumento de pesos.
+
+## Configuración común
+
+- 20 épocas, 640 px, batch 16, seed 42, AMP.
+- SGD: LR 0.01, momentum 0.937, weight decay 0.0005, `lrf=0.01`.
+- Warmup de 3 épocas; patience 100.
+- Augmentation normal idéntica: HSV 0.015/0.7/0.4, translate 0.1,
+  scale 0.5, horizontal flip 0.5 y mosaic 1.0 (cerrado en las últimas
+  10 épocas). Mixup/cutmix/copy-paste permanecen en 0 para ambos.
+- Train: 3,082; val: 385; test: 386.
+- TEST está presente para integridad, pero el script no ofrece ninguna acción
+  que lo evalúe.
+
+La configuración completa está en `configs/comparison.yaml`.
+
+## Qué subir y dónde
+
+Subir **un único archivo**:
+
+`colab_stage6.zip`
+
+a esta ruta exacta de Google Drive:
+
+`MyDrive/TP1_LMD/stage6/packages/colab_stage6.zip`
+
+Crear si no existen las carpetas `TP1_LMD/stage6/packages`. Los resultados se
+guardarán automáticamente en:
+
+`MyDrive/TP1_LMD/stage6/results/`
+
+El notebook extrae una copia de trabajo en `/content/colab_stage6` para no
+entrenar leyendo miles de imágenes directamente desde Drive. Checkpoints,
+`results.csv`, curvas, preflight y smoke se escriben en Drive.
+
+## Ejecución
+
+1. Abrir `stage6_colab.ipynb` en el notebook Colab ya conectado a una T4.
+2. Ejecutar, en orden, solo la sección **PREFLIGHT + SMOKE**.
+3. Confirmar que `preflight.json` y `smoke_gate.json` indican `PASS` para
+   ambos modelos y revisar la VRAM registrada.
+4. Detenerse. No ejecutar las celdas de 20 épocas hasta revisar el smoke.
+5. Para continuar posteriormente, cambiar manualmente
+   `RUN_LONG_TRAINING = True` en la celda-gate.
+6. Ejecutar primero YOLOv8n y luego LMD_YOLO. Cada corrida rechaza sobrescribir
+   resultados existentes.
+7. Ejecutar la celda de comparación solo cuando ambas hayan terminado.
+
+Reiniciar Colab no invalida el flujo: volver a montar Drive, extraer el ZIP y
+usar el mismo directorio persistente de resultados. No se debe repetir una
+corrida ya existente; conservarla o moverla explícitamente antes de reintentar.
+
+## Integridad
+
+- `manifests/dataset_manifest.json`: SHA-256 individual de todas las imágenes
+  y labels, conteos y digest combinado.
+- `manifests/package_manifest.json`: SHA-256 de todos los archivos del paquete.
+- `scripts/manifests.py verify-package`: verificación completa tras extraer.
+- El preflight vuelve a comprobar todo el dataset, las clases, splits,
+  arquitectura, forward/backward CUDA y procedencia de Ultralytics.
+
+No instalar `ultralytics` mediante pip. La copia autorizada está en
+`vendor/ultralytics` y el preflight rechaza cualquier otra procedencia.
+

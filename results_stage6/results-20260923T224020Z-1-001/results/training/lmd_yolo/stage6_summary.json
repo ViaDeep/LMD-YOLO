@@ -1,0 +1,89 @@
+{
+  "model": "lmd_yolo",
+  "status": "COMPLETE",
+  "initialization": "scratch",
+  "structure": {
+    "backbone": "LeYOLO-Nano",
+    "head": "DetectDBB",
+    "dbb_count": 6,
+    "dbb_mode": "TRAIN multibranch",
+    "mgconv_positions": [
+      21,
+      24
+    ],
+    "mgconv_groups": [
+      2,
+      2
+    ],
+    "classes": [
+      "D00",
+      "D10",
+      "D20",
+      "D40"
+    ],
+    "strides": [
+      8,
+      16,
+      32
+    ],
+    "parameters": 3073884,
+    "gflops_640": 8.56617,
+    "flops_profile": {
+      "gflops": 8.5661696,
+      "macs": 4283084800,
+      "parameters": 3073884,
+      "method": "ultralytics-thop full 1x3x640x640 CPU forward; FLOPs=2*MACs",
+      "thop_version": "2.1.6"
+    }
+  },
+  "epochs": 20,
+  "best_epoch": 20,
+  "training_seconds": 1246.2266612052917,
+  "seconds_per_epoch": 62.31133306026459,
+  "peak_allocated_bytes": 2723712512,
+  "training_return_metrics": {
+    "metrics/precision(B)": 0.598101013415886,
+    "metrics/recall(B)": 0.4175168609337466,
+    "metrics/mAP50(B)": 0.46216342236179103,
+    "metrics/mAP50-95(B)": 0.22783560840905848,
+    "fitness": 0.22783560840905848
+  },
+  "explicit_best_validation": {
+    "metrics/precision(B)": 0.6090361209850897,
+    "metrics/recall(B)": 0.41185263620101464,
+    "metrics/mAP50(B)": 0.46168173352942327,
+    "metrics/mAP50-95(B)": 0.23043983762139017,
+    "fitness": 0.23043983762139017
+  },
+  "per_class": {
+    "D00": {
+      "precision": 0.6135611207596324,
+      "recall": 0.43846153846153846,
+      "mAP50": 0.4950699654099398,
+      "mAP50_95": 0.23492594787043966
+    },
+    "D10": {
+      "precision": 0.6060140826629604,
+      "recall": 0.4980392156862745,
+      "mAP50": 0.5394834698740778,
+      "mAP50_95": 0.2580345971887251
+    },
+    "D20": {
+      "precision": 0.8526449594244223,
+      "recall": 0.35796861418565734,
+      "mAP50": 0.4684523484513756,
+      "mAP50_95": 0.26177111885825927
+    },
+    "D40": {
+      "precision": 0.36392432109334394,
+      "recall": 0.35294117647058826,
+      "mAP50": 0.3437211503822999,
+      "mAP50_95": 0.16702768656813655
+    }
+  },
+  "best_pt": "/content/drive/MyDrive/TP1_LMD/stage6/results/training/lmd_yolo/weights/best.pt",
+  "last_pt": "/content/drive/MyDrive/TP1_LMD/stage6/results/training/lmd_yolo/weights/last.pt",
+  "results_csv": "/content/drive/MyDrive/TP1_LMD/stage6/results/training/lmd_yolo/results.csv",
+  "best_pt_sha256": "1d7b292dc93923bf9be9c767b304a43bb025a859848baddadbf0e65f0e7ab24b",
+  "last_pt_sha256": "c74edb0b7cc9fa2b279da305e7ef7c416e947b2627dd9416646850ef0bad03ec"
+}

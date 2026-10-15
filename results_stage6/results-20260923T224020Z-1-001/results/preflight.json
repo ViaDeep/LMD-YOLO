@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "gpu": "Tesla T4",
+  "gpu_total_bytes": 15637086208,
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "torch": "2.11.0+cu128",
+  "torchvision": "0.26.0+cu128",
+  "ultralytics": "8.4.153",
+  "ultralytics_path": "/content/colab_stage6/vendor/ultralytics/__init__.py",
+  "dataset": {
+    "split_counts": {
+      "train": 3082,
+      "val": 385,
+      "test": 386
+    },
+    "files_verified": 7706,
+    "full_hash": true
+  },
+  "baseline": {
+    "architecture": "YOLOv8n",
+    "classes": [
+      "D00",
+      "D10",
+      "D20",
+      "D40"
+    ],
+    "strides": [
+      8,
+      16,
+      32
+    ],
+    "parameters": 3011628,
+    "gflops_640": 8.194918,
+    "flops_profile": {
+      "gflops": 8.1949184,
+      "macs": 4097459200,
+      "parameters": 3011628,
+      "method": "ultralytics-thop full 1x3x640x640 CPU forward; FLOPs=2*MACs",
+      "thop_version": "2.1.6"
+    }
+  },
+  "lmd": {
+    "backbone": "LeYOLO-Nano",
+    "head": "DetectDBB",
+    "dbb_count": 6,
+    "dbb_mode": "TRAIN multibranch",
+    "mgconv_positions": [
+      21,
+      24
+    ],
+    "mgconv_groups": [
+      2,
+      2
+    ],
+    "classes": [
+      "D00",
+      "D10",
+      "D20",
+      "D40"
+    ],
+    "strides": [
+      8,
+      16,
+      32
+    ],
+    "parameters": 3073884,
+    "gflops_640": 8.56617,
+    "flops_profile": {
+      "gflops": 8.5661696,
+      "macs": 4283084800,
+      "parameters": 3073884,
+      "method": "ultralytics-thop full 1x3x640x640 CPU forward; FLOPs=2*MACs",
+      "thop_version": "2.1.6"
+    }
+  },
+  "gpu_checks": {
+    "yolov8n": {
+      "forward": "PASS",
+      "backward": "PASS",
+      "peak_allocated_bytes_batch2": 414390784
+    },
+    "lmd_yolo": {
+      "forward": "PASS",
+      "backward": "PASS",
+      "peak_allocated_bytes_batch2": 637980672
+    }
+  },
+  "config_sha256": "07f2d39e7f51bc22096bb22294a2abc4d7acc4bb0358ae76b0bff7f6421cafc3",
+  "dataset_manifest_sha256": "fced2d518eb4b559d4d890162a9738a129b4f31020944a1d35a9d7a31ec07abd",
+  "initialization": "scratch_both"
+}

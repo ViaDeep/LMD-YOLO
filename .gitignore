@@ -1,0 +1,45 @@
+# Entornos virtuales
+.venv/
+venv/
+
+# Cache de Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Dataset pesado
+data/raw/
+data/dataset/
+data/images/
+data/labels/
+data/overfit64/
+
+# Archivos temporales
+tmp/
+*.tmp
+*.log
+
+# Archivos sensibles
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Compilaciones de Android
+.gradle/
+**/build/
+local.properties
+*.apk
+*.aab
+
+# Archivos comprimidos duplicados
+colab_stage6.zip
+
+# Pesos base descargables
+/yolov8n.pt
+
+# Caché del dataset de Ultralytics
+*.cache

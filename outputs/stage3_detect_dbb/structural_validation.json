@@ -1,0 +1,141 @@
+{
+  "yaml": "C:\\TP1\\models\\yolov8n_leyolo_nano_mgconv_detect_dbb_stage3.yaml",
+  "classes": [
+    "D00",
+    "D10",
+    "D20",
+    "D40"
+  ],
+  "dbb_count": 6,
+  "head": "DetectDBB",
+  "matches_experimental_A": true,
+  "features": {
+    "P3": [
+      1,
+      64,
+      80,
+      80
+    ],
+    "P4": [
+      1,
+      128,
+      40,
+      40
+    ],
+    "P5": [
+      1,
+      256,
+      20,
+      20
+    ]
+  },
+  "strides": [
+    8,
+    16,
+    32
+  ],
+  "train": {
+    "parameters": 3073884,
+    "gflops_640": 8.56617
+  },
+  "deploy": {
+    "parameters": 2265820,
+    "gflops_640": 6.157107
+  },
+  "training_mode_forward": "PASS",
+  "eval_forward_1x3x640x640": "PASS",
+  "training_branches_removed_in_deploy": true,
+  "equivalence": {
+    "rtol": 0.001,
+    "atol": 0.0001,
+    "details": {
+      "P3_cv2": {
+        "max_abs": 4.76837158203125e-07,
+        "max_rel": 2.384864217219729e-07,
+        "shape": [
+          1,
+          64,
+          80,
+          80
+        ]
+      },
+      "P4_cv2": {
+        "max_abs": 4.76837158203125e-07,
+        "max_rel": 2.3842432028686744e-07,
+        "shape": [
+          1,
+          64,
+          40,
+          40
+        ]
+      },
+      "P5_cv2": {
+        "max_abs": 2.384185791015625e-07,
+        "max_rel": 1.1950895384416071e-07,
+        "shape": [
+          1,
+          64,
+          20,
+          20
+        ]
+      },
+      "P3_cv3": {
+        "max_abs": 9.5367431640625e-07,
+        "max_rel": 1.1168000924044463e-07,
+        "shape": [
+          1,
+          4,
+          80,
+          80
+        ]
+      },
+      "P4_cv3": {
+        "max_abs": 4.76837158203125e-07,
+        "max_rel": 6.667098517709746e-08,
+        "shape": [
+          1,
+          4,
+          40,
+          40
+        ]
+      },
+      "P5_cv3": {
+        "max_abs": 9.5367431640625e-07,
+        "max_rel": 1.653620813613088e-07,
+        "shape": [
+          1,
+          4,
+          20,
+          20
+        ]
+      },
+      "boxes_concat": {
+        "max_abs": 4.76837158203125e-07,
+        "max_rel": 2.384864217219729e-07,
+        "shape": [
+          1,
+          64,
+          8400
+        ]
+      },
+      "scores_concat": {
+        "max_abs": 9.5367431640625e-07,
+        "max_rel": 1.653620813613088e-07,
+        "shape": [
+          1,
+          4,
+          8400
+        ]
+      },
+      "decoded": {
+        "max_abs": 9.1552734375e-05,
+        "max_rel": 1.4378151718119625e-06,
+        "shape": [
+          1,
+          8,
+          8400
+        ]
+      }
+    }
+  }
+}

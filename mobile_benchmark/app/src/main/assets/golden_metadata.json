@@ -1,0 +1,85 @@
+{
+  "model_sha256": "a68e5c09d2d9c76f0259d9705727f14917f67f2a6dafcedbffbe86d8deed51b8",
+  "model_bytes": 9214905,
+  "image_name": "China_Drone_000001.jpg",
+  "image_sha256": "9a54fb4f9849094450c3c9c3ffa9550d76621479eb9f284ee1c01ab2da6f6698",
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "output_shape": [
+    1,
+    8,
+    8400
+  ],
+  "input_sha256": "5578ba8dde0968be3e9a922731282174793e2d75caf93ac8e60e4f3be2c536ec",
+  "output_sha256": "27a869aefb1642a21823fa571faf5b0f0a142f63b188635370fa972a9af8fe16",
+  "onnxruntime_version": "1.30.0",
+  "execution_provider": "CPUExecutionProvider",
+  "preprocessing": "OpenCV imread BGR, resize 640x640 INTER_LINEAR, BGR->RGB, NCHW FP32 /255",
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "class_names": [
+    "D00",
+    "D10",
+    "D20",
+    "D40"
+  ],
+  "candidate_count": 0,
+  "max_class_score": 0.016319960355758667,
+  "max_class_score_class_id": 0,
+  "max_class_score_anchor": 7907,
+  "detections": [],
+  "representative_output_values": [
+    {
+      "index": 0,
+      "value": 2.863039016723633
+    },
+    {
+      "index": 1,
+      "value": 12.320642471313477
+    },
+    {
+      "index": 100,
+      "value": 165.08889770507812
+    },
+    {
+      "index": 8399,
+      "value": 618.9555053710938
+    },
+    {
+      "index": 8400,
+      "value": 4.0223388671875
+    },
+    {
+      "index": 16800,
+      "value": 107.57095336914062
+    },
+    {
+      "index": 25200,
+      "value": 134.05426025390625
+    },
+    {
+      "index": 33600,
+      "value": 0.00018337368965148926
+    },
+    {
+      "index": 42000,
+      "value": 7.399916648864746e-05
+    },
+    {
+      "index": 50400,
+      "value": 0.00010147690773010254
+    },
+    {
+      "index": 58800,
+      "value": 9.912252426147461e-05
+    },
+    {
+      "index": 67199,
+      "value": 0.0014860928058624268
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "reference": {
+    "parameters_m": 1.39,
+    "gflops_640": 3.9
+  },
+  "selection_rule": "lowest normalized absolute distance; reference only, no architecture tuning",
+  "most_consistent": "nano",
+  "results": [
+    {
+      "candidate": "nano",
+      "yaml": "models\\yolov8n_leyolo_nano_stage1.yaml",
+      "parameters": 2337500,
+      "parameters_m": 2.3375,
+      "gflops_640": 6.257459,
+      "detection_strides": [
+        8,
+        16,
+        32
+      ],
+      "detect_classes": 4,
+      "feature_shapes": {
+        "backbone_p3": [
+          1,
+          32,
+          80,
+          80
+        ],
+        "backbone_p4": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "backbone_p5": [
+          1,
+          96,
+          20,
+          20
+        ],
+        "neck_p3": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "neck_p4": [
+          1,
+          128,
+          40,
+          40
+        ],
+        "neck_p5": [
+          1,
+          256,
+          20,
+          20
+        ]
+      },
+      "reference_distance": 1.286131
+    },
+    {
+      "candidate": "small",
+      "yaml": "models\\yolov8n_leyolo_small_stage1.yaml",
+      "parameters": 2840100,
+      "parameters_m": 2.8401,
+      "gflops_640": 7.390566,
+      "detection_strides": [
+        8,
+        16,
+        32
+      ],
+      "detect_classes": 4,
+      "feature_shapes": {
+        "backbone_p3": [
+          1,
+          48,
+          80,
+          80
+        ],
+        "backbone_p4": [
+          1,
+          88,
+          40,
+          40
+        ],
+        "backbone_p5": [
+          1,
+          128,
+          20,
+          20
+        ],
+        "neck_p3": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "neck_p4": [
+          1,
+          128,
+          40,
+          40
+        ],
+        "neck_p5": [
+          1,
+          256,
+          20,
+          20
+        ]
+      },
+      "reference_distance": 1.938254
+    }
+  ]
+}
