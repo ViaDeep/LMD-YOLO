@@ -288,7 +288,7 @@ def metric_dict(metrics) -> dict[str, float]:
     return {key: float(value) for key, value in metrics.results_dict.items()}
 
 
-def train_model(name: str, results_root: Path) -> None:
+def train_model(name: str, results_root: Path, resume: bool = False) -> None:
     gate_path = results_root / "smoke_gate.json"
     if not gate_path.is_file():
         raise RuntimeError("No smoke gate. Run preflight and smoke, inspect them, then train manually.")
@@ -300,21 +300,29 @@ def train_model(name: str, results_root: Path) -> None:
     project = results_root / "training"
     run_dir = project / name
     val_dir = results_root / "best_validation" / name
-    if run_dir.exists() or val_dir.exists():
+    last_ckpt = run_dir / "weights" / "last.pt"
+    resuming = resume and run_dir.exists() and last_ckpt.is_file() and not (run_dir / "stage6_summary.json").exists()
+    if val_dir.exists() or (run_dir.exists() and not resuming):
         raise FileExistsError(f"Refusing to overwrite Stage-6 results for {name}")
     model = build_model(name)
     structure = audit_baseline(model) if name == "yolov8n" else audit_lmd(model)
     torch.cuda.reset_peak_memory_stats()
-    started = time.time()
-    returned = model.train(
-        **train_kwargs(data_yaml, cfg), epochs=cfg["epochs"],
-        project=str(project), name=name, exist_ok=False, save_period=5,
-    )
-    training_seconds = time.time() - started
+    if resuming:
+        # Colab se desconectó: Ultralytics retoma desde last.pt con los mismos argumentos, épocas y calendario de LR.
+        returned = YOLO(str(last_ckpt), task="detect", verbose=False).train(resume=True)
+    else:
+        returned = model.train(
+            **train_kwargs(data_yaml, cfg), epochs=cfg["epochs"],
+            project=str(project), name=name, exist_ok=False, save_period=5,
+        )
     peak_memory = torch.cuda.max_memory_allocated()
     csv_path = run_dir / "results.csv"
     row_count = assert_finite_csv(csv_path)
     rows = list(csv.DictReader(csv_path.open(newline="", encoding="utf-8")))
+    if row_count != cfg["epochs"]:
+        raise AssertionError(f"Expected {cfg['epochs']} epochs in {csv_path}, found {row_count}")
+    # Tiempo acumulado que registra Ultralytics; sigue siendo correcto si la corrida se reanudó.
+    training_seconds = float(rows[-1]["time"])
     best_row = max(rows, key=lambda row: float(row["metrics/mAP50-95(B)"]))
     best_pt, last_pt = run_dir / "weights" / "best.pt", run_dir / "weights" / "last.pt"
     best_model = YOLO(str(best_pt), task="detect", verbose=False)
@@ -334,6 +342,7 @@ def train_model(name: str, results_root: Path) -> None:
     }
     summary = {
         "model": name, "status": "COMPLETE", "initialization": "scratch",
+        "config": CONFIG_PATH.name, "config_sha256": sha256(CONFIG_PATH), "resumed": resuming,
         "structure": structure, "epochs": row_count, "best_epoch": int(best_row["epoch"]),
         "training_seconds": training_seconds, "seconds_per_epoch": training_seconds / row_count,
         "peak_allocated_bytes": peak_memory, "training_return_metrics": metric_dict(returned),
@@ -375,12 +384,18 @@ def compare(results_root: Path) -> None:
 
 
 def main() -> None:
+    global CONFIG_PATH
     parser = argparse.ArgumentParser()
     parser.add_argument("action", choices=("preflight", "smoke", "train", "compare"))
     parser.add_argument("--results-root", type=Path, required=True)
     parser.add_argument("--model", choices=("yolov8n", "lmd_yolo"))
     parser.add_argument("--skip-full-hash", action="store_true", help="Size/count check only; full hash is recommended")
+    parser.add_argument("--config", type=Path, default=CONFIG_PATH, help="Training config (default: configs/comparison.yaml)")
+    parser.add_argument("--resume", action="store_true", help="train: continue an interrupted run from its last.pt")
     args = parser.parse_args()
+    CONFIG_PATH = args.config.expanduser().resolve()
+    if not CONFIG_PATH.is_file():
+        parser.error(f"Config not found: {CONFIG_PATH}")
     results_root = args.results_root.expanduser().resolve()
     if args.action == "preflight":
         preflight(results_root, args.skip_full_hash)
@@ -389,7 +404,7 @@ def main() -> None:
     elif args.action == "train":
         if not args.model:
             parser.error("train requires --model")
-        train_model(args.model, results_root)
+        train_model(args.model, results_root, resume=args.resume)
     else:
         compare(results_root)
 
