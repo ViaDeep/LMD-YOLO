@@ -1,0 +1,36 @@
+{
+  "source_checkpoint": "stage7/training/lmd_yolo/weights/best.pt",
+  "source_sha256": "01c45ad525915aa17776939894213fbaada89b3a9d523297b8f55f7c2b84945b",
+  "ultralytics": "8.4.153",
+  "torch": "2.14.1+cu130",
+  "onnx": "1.23.2",
+  "onnxruntime": "1.31.0",
+  "deploy_max_abs_vs_train": 0.0001220703125,
+  "onnx_max_abs_vs_train": 0.00274658203125,
+  "onnx_mean_abs_vs_train": 2.4572100301156752e-05,
+  "inputs": [
+    [
+      "images",
+      [
+        1,
+        3,
+        640,
+        640
+      ]
+    ]
+  ],
+  "outputs": [
+    [
+      "output0",
+      [
+        1,
+        8,
+        8400
+      ]
+    ]
+  ],
+  "onnx_file": "/tmp/claude-0/-home-claude/2650c707-9f2f-5ac0-9fc8-936c7f879c68/scratchpad/export/out7/lmd_yolo_stage7_deploy_fp32.onnx",
+  "onnx_bytes": 9214918,
+  "onnx_sha256": "02aac155163a622fec712618451f2992ec240be6f21a921edb847f546a2cb376",
+  "test_image": "China_Drone_000001.jpg"
+}
