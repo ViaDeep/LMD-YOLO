@@ -8,9 +8,24 @@
       "sha256": "8b3b52bfaa6a13e05c67fe084ee4a722048212b12abda2f822892c8328e61a71"
     },
     {
+      "path": "FLOPS_PROFILING.md",
+      "bytes": 1691,
+      "sha256": "6fc13d83d8fc3fa10ca35391fcb9bfe76c3c533e9938b83abcb7ed9713ab3e09"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4266,
+      "sha256": "5bd0d9be629cffb39d5f0e32a5bcfb4f00d65eeaae547aa695d395cca852d411"
+    },
+    {
       "path": "configs/comparison.yaml",
       "bytes": 1003,
       "sha256": "07f2d39e7f51bc22096bb22294a2abc4d7acc4bb0358ae76b0bff7f6421cafc3"
+    },
+    {
+      "path": "configs/stage7_100_epochs.yaml",
+      "bytes": 1015,
+      "sha256": "c3c6d842e993037576c0f3b466dceb6d2bed334dd8bff3dbfe218b5313e18ceb"
     },
     {
       "path": "dataset/data.yaml",
@@ -36623,11 +36638,6 @@
       "sha256": "c3aa4b9a88ad2bb159a5c24d05af633ec7e2626319e23887435e74e8519f9f49"
     },
     {
-      "path": "dataset/labels/train.cache",
-      "bytes": 611467,
-      "sha256": "1e35536079332f9c386bc736b9fa24846603388c80a6fd0c2d876d7a6b9fda39"
-    },
-    {
       "path": "dataset/labels/val/China_Drone_000001.txt",
       "bytes": 76,
       "sha256": "17f2bb9588f4d5173c35ab6f4a1f3683cad49f090152d70981f03bf056eeabe6"
@@ -38553,16 +38563,6 @@
       "sha256": "1d4a96d5188bfed31d2a7647407a608ee3b50d44c8df8641e838c0566bac2d09"
     },
     {
-      "path": "dataset/labels/val.cache",
-      "bytes": 75735,
-      "sha256": "bd14c0d9ade9c41dd7cbfdb1cb318cde960dd6f8547293480736a31c787bbea1"
-    },
-    {
-      "path": "FLOPS_PROFILING.md",
-      "bytes": 1691,
-      "sha256": "6fc13d83d8fc3fa10ca35391fcb9bfe76c3c533e9938b83abcb7ed9713ab3e09"
-    },
-    {
       "path": "manifests/dataset_manifest.json",
       "bytes": 1796474,
       "sha256": "fced2d518eb4b559d4d890162a9738a129b4f31020944a1d35a9d7a31ec07abd"
@@ -38576,11 +38576,6 @@
       "path": "models/yolov8n.yaml",
       "bytes": 1986,
       "sha256": "b2b2e455307aea0e9f55282cb39eb32831e8f71a70ff21408299609476de7968"
-    },
-    {
-      "path": "README.md",
-      "bytes": 3258,
-      "sha256": "754071a26621e80e216c1c4122eac15f35d927bfa44ddce26a6aa1f49149b766"
     },
     {
       "path": "reference_weights/lmd_stage3_smoke_reference.pt",
@@ -38604,13 +38599,18 @@
     },
     {
       "path": "scripts/stage6.py",
-      "bytes": 17620,
-      "sha256": "cb30f50845fd5122b237ab8be739658599e79111aa78a7c3b9c2c318b073ede6"
+      "bytes": 18812,
+      "sha256": "3a29fbd1d9ab35af18e4f38ab232b99e8c41c189af9459ff7ee00f3bba6746fb"
     },
     {
       "path": "stage6_colab.ipynb",
       "bytes": 5546,
       "sha256": "3edcf809c36dd0facfdea005f54c83d9f8b32e8f7908e9315d20f95d8ce287c7"
+    },
+    {
+      "path": "stage7_colab.ipynb",
+      "bytes": 6921,
+      "sha256": "d172041aa161e64ad153e511c90634fdcd5d929aff5c3360a78f50ce527abdf6"
     },
     {
       "path": "vendor/ultralytics/__init__.py",
@@ -38633,6 +38633,61 @@
       "sha256": "4f4deef636360243c08c32f2134bee31f497df7394c3b22c60c58f5452bcee85"
     },
     {
+      "path": "vendor/ultralytics/cfg/datasets/Argoverse.yaml",
+      "bytes": 3353,
+      "sha256": "54bba1cff80f4194c0681147133482f4fc4c398df3f135325016550409bf1c51"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/DOTAv1.5.yaml",
+      "bytes": 1212,
+      "sha256": "5febb56c74b016a7f9faf80f2168897d87afdca2bd2c7857673d5285036471cd"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/DOTAv1.yaml",
+      "bytes": 1182,
+      "sha256": "18e3ca2f92546dd154fc1ee35ad38f773dbb3a75ff0c93029bb5885ab64006bf"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/GlobalWheat2020.yaml",
+      "bytes": 2143,
+      "sha256": "fc68c4e6cc467292e8bfbafe334e97b235a5a25322cb7c4bc6ce24b30da56517"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/HomeObjects-3K.yaml",
+      "bytes": 933,
+      "sha256": "b90fb05934fd5be1ebee18aea9ae2b312e404e791078cb8645e689b2ac5e3fb5"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/ImageNet.yaml",
+      "bytes": 42528,
+      "sha256": "d3ab26a117ae27d4345e6cca94ad18e3ccfefbef9279aaa00bacdd391cb76f6f"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/Objects365.yaml",
+      "bytes": 9648,
+      "sha256": "7ca822c2f9ed33e4696df2660203e67cbde4d65c9797425965be9efd113cbf5e"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/SKU-110K.yaml",
+      "bytes": 2608,
+      "sha256": "7155e83003876e293e30038aaad91ee93536402684ca7f5c065cada9078a876d"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/TT100K.yaml",
+      "bytes": 6895,
+      "sha256": "08c6fde19c620038e0d682994e16360eb4aded5b2ac6bc482b7ce50a8b5f407c"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/VOC.yaml",
+      "bytes": 3816,
+      "sha256": "6e2dae457723b975b20a60952852fa6cbc3d2ac469520282a0ef089effaa544d"
+    },
+    {
+      "path": "vendor/ultralytics/cfg/datasets/VisDrone.yaml",
+      "bytes": 3395,
+      "sha256": "627f60f7602db38b6a462301ced87ad24bcdee2a692eaa9d4e02448492bb29fe"
+    },
+    {
       "path": "vendor/ultralytics/cfg/datasets/ade20k.yaml",
       "bytes": 4323,
       "sha256": "f3ef82f593cde5b8c7f91efd9f704a7a8ce4c39b535f66a76a4c791798c2df92"
@@ -38641,11 +38696,6 @@
       "path": "vendor/ultralytics/cfg/datasets/african-wildlife.yaml",
       "bytes": 914,
       "sha256": "187f354b97c6e5d0226d3c3fa757348af68b9e7bd79461779335ad6f25377a3a"
-    },
-    {
-      "path": "vendor/ultralytics/cfg/datasets/Argoverse.yaml",
-      "bytes": 3353,
-      "sha256": "54bba1cff80f4194c0681147133482f4fc4c398df3f135325016550409bf1c51"
     },
     {
       "path": "vendor/ultralytics/cfg/datasets/brain-tumor.yaml",
@@ -38788,34 +38838,9 @@
       "sha256": "5bfdc1729f1d44778e2f45455ac69a3445eaf0a8f63f3818c15110a9e3ad36a4"
     },
     {
-      "path": "vendor/ultralytics/cfg/datasets/DOTAv1.5.yaml",
-      "bytes": 1212,
-      "sha256": "5febb56c74b016a7f9faf80f2168897d87afdca2bd2c7857673d5285036471cd"
-    },
-    {
-      "path": "vendor/ultralytics/cfg/datasets/DOTAv1.yaml",
-      "bytes": 1182,
-      "sha256": "18e3ca2f92546dd154fc1ee35ad38f773dbb3a75ff0c93029bb5885ab64006bf"
-    },
-    {
-      "path": "vendor/ultralytics/cfg/datasets/GlobalWheat2020.yaml",
-      "bytes": 2143,
-      "sha256": "fc68c4e6cc467292e8bfbafe334e97b235a5a25322cb7c4bc6ce24b30da56517"
-    },
-    {
       "path": "vendor/ultralytics/cfg/datasets/hand-keypoints.yaml",
       "bytes": 1362,
       "sha256": "c0f2d879998643c95623cf682f04553031a70646ba1fbc8f642b717a0f0ff3bf"
-    },
-    {
-      "path": "vendor/ultralytics/cfg/datasets/HomeObjects-3K.yaml",
-      "bytes": 933,
-      "sha256": "b90fb05934fd5be1ebee18aea9ae2b312e404e791078cb8645e689b2ac5e3fb5"
-    },
-    {
-      "path": "vendor/ultralytics/cfg/datasets/ImageNet.yaml",
-      "bytes": 42528,
-      "sha256": "d3ab26a117ae27d4345e6cca94ad18e3ccfefbef9279aaa00bacdd391cb76f6f"
     },
     {
       "path": "vendor/ultralytics/cfg/datasets/kitti.yaml",
@@ -38838,11 +38863,6 @@
       "sha256": "1152202ac54e22d8f8db8ef12860dbeb6d847acd490141a8adbdc8a76e6efd25"
     },
     {
-      "path": "vendor/ultralytics/cfg/datasets/Objects365.yaml",
-      "bytes": 9648,
-      "sha256": "7ca822c2f9ed33e4696df2660203e67cbde4d65c9797425965be9efd113cbf5e"
-    },
-    {
       "path": "vendor/ultralytics/cfg/datasets/open-images-v7.yaml",
       "bytes": 12115,
       "sha256": "497468af9dc644d149101efc090727d3c6fd644591f4cc2e8c5adeb00f4ad848"
@@ -38858,29 +38878,9 @@
       "sha256": "d77e1ea3e12968af57c484b34d99d43f66cdb67dc76fee63ffe9cee0fb7e2493"
     },
     {
-      "path": "vendor/ultralytics/cfg/datasets/SKU-110K.yaml",
-      "bytes": 2608,
-      "sha256": "7155e83003876e293e30038aaad91ee93536402684ca7f5c065cada9078a876d"
-    },
-    {
       "path": "vendor/ultralytics/cfg/datasets/tiger-pose.yaml",
       "bytes": 1195,
       "sha256": "0d09394bbb87e496cfde90fa43b235d8001a80d440dc02a26537ae6ec8e1611e"
-    },
-    {
-      "path": "vendor/ultralytics/cfg/datasets/TT100K.yaml",
-      "bytes": 6895,
-      "sha256": "08c6fde19c620038e0d682994e16360eb4aded5b2ac6bc482b7ce50a8b5f407c"
-    },
-    {
-      "path": "vendor/ultralytics/cfg/datasets/VisDrone.yaml",
-      "bytes": 3395,
-      "sha256": "627f60f7602db38b6a462301ced87ad24bcdee2a692eaa9d4e02448492bb29fe"
-    },
-    {
-      "path": "vendor/ultralytics/cfg/datasets/VOC.yaml",
-      "bytes": 3816,
-      "sha256": "6e2dae457723b975b20a60952852fa6cbc3d2ac469520282a0ef089effaa544d"
     },
     {
       "path": "vendor/ultralytics/cfg/datasets/xView.yaml",
@@ -40458,5 +40458,5 @@
       "sha256": "4050d7602c2ca72ea74bfc3f51b57a3a2887e56380ce57fc9852c68e2df22662"
     }
   ],
-  "combined_sha256": "8ad47ce98cf94c2c79f20d29d91fb312e63c5767b3c510e83df38a291222b970"
+  "combined_sha256": "9cfa40405fbf875c0da46f5e7be5ba9e108d669d75c6991d21bd11d45f9bdbcc"
 }

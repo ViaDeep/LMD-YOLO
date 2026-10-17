@@ -76,3 +76,20 @@ corrida ya existente; conservarla o moverla explícitamente antes de reintentar.
 No instalar `ultralytics` mediante pip. La copia autorizada está en
 `vendor/ultralytics` y el preflight rechaza cualquier otra procedencia.
 
+## Etapa 7 — 100 épocas
+
+Misma configuración que la etapa 6 salvo `epochs: 100`, en `configs/stage7_100_epochs.yaml`. Se usa
+el notebook `stage7_colab.ipynb`, que pasa `--config` a cada acción. Ambos modelos parten de cero con
+seed 42, igual que en la etapa 6; los resultados de la etapa 6 no se modifican.
+
+- ZIP: `MyDrive/TP1_LMD/stage7/packages/colab_stage6.zip`.
+- Resultados: `MyDrive/TP1_LMD/stage7/results/`.
+- Si Colab se desconecta, `stage6.py train --model <modelo> --resume` retoma la corrida desde su
+  `last.pt` con el mismo calendario de LR. El tiempo del resumen sale de la columna `time` de
+  `results.csv`, que Ultralytics acumula entre sesiones.
+- El resumen exige exactamente las épocas del config y registra el config usado y si hubo reanudación.
+
+El paquete del repositorio guarda los labels con fin de línea LF, pero los manifiestos se generaron con
+CRLF. Antes de comprimir hay que restaurar CRLF en los archivos cuyo hash coincide así, o el preflight
+rechazará el dataset.
+

@@ -1,0 +1,178 @@
+{
+  "status": "READY_FOR_TECHNICAL_REVIEW",
+  "test_used": false,
+  "yolov8n": {
+    "model": "yolov8n",
+    "status": "COMPLETE",
+    "initialization": "scratch",
+    "config": "stage7_100_epochs.yaml",
+    "config_sha256": "c3c6d842e993037576c0f3b466dceb6d2bed334dd8bff3dbfe218b5313e18ceb",
+    "resumed": false,
+    "structure": {
+      "architecture": "YOLOv8n",
+      "classes": [
+        "D00",
+        "D10",
+        "D20",
+        "D40"
+      ],
+      "strides": [
+        8,
+        16,
+        32
+      ],
+      "parameters": 3011628,
+      "gflops_640": 8.194918,
+      "flops_profile": {
+        "gflops": 8.1949184,
+        "macs": 4097459200,
+        "parameters": 3011628,
+        "method": "ultralytics-thop full 1x3x640x640 CPU forward; FLOPs=2*MACs",
+        "thop_version": "2.1.6"
+      }
+    },
+    "epochs": 100,
+    "best_epoch": 100,
+    "training_seconds": 4388.0,
+    "seconds_per_epoch": 43.88,
+    "peak_allocated_bytes": 2005696512,
+    "training_return_metrics": {
+      "metrics/precision(B)": 0.7309372876392252,
+      "metrics/recall(B)": 0.6335634233901816,
+      "metrics/mAP50(B)": 0.6920593657122078,
+      "metrics/mAP50-95(B)": 0.4107888499518292,
+      "fitness": 0.4107888499518292
+    },
+    "explicit_best_validation": {
+      "metrics/precision(B)": 0.7312448977898194,
+      "metrics/recall(B)": 0.6341277120114396,
+      "metrics/mAP50(B)": 0.6901217052571564,
+      "metrics/mAP50-95(B)": 0.40884730600701735,
+      "fitness": 0.40884730600701735
+    },
+    "per_class": {
+      "D00": {
+        "precision": 0.695828256550572,
+        "recall": 0.7102564102564103,
+        "mAP50": 0.7568816196699031,
+        "mAP50_95": 0.4530422254798555
+      },
+      "D10": {
+        "precision": 0.7387648010001557,
+        "recall": 0.7176470588235294,
+        "mAP50": 0.768842720619405,
+        "mAP50_95": 0.4350904764164878
+      },
+      "D20": {
+        "precision": 0.8488963694780955,
+        "recall": 0.5791956142599365,
+        "mAP50": 0.7008810201163265,
+        "mAP50_95": 0.4211261446730531
+      },
+      "D40": {
+        "precision": 0.6414901641304543,
+        "recall": 0.5294117647058824,
+        "mAP50": 0.5338814606229911,
+        "mAP50_95": 0.3261303774586727
+      }
+    },
+    "best_pt": "/content/drive/MyDrive/TP1_LMD/stage7/results/training/yolov8n/weights/best.pt",
+    "last_pt": "/content/drive/MyDrive/TP1_LMD/stage7/results/training/yolov8n/weights/last.pt",
+    "results_csv": "/content/drive/MyDrive/TP1_LMD/stage7/results/training/yolov8n/results.csv",
+    "best_pt_sha256": "2e2bb891a0d471a4bc94053deac872aaaa5bb6b2f41260dd8d322ded93d26bb5",
+    "last_pt_sha256": "9b8d276ec2cb5999b015666edf231af67f8bdfe1119440a4ac2d3f5fc97decc3"
+  },
+  "lmd_yolo": {
+    "model": "lmd_yolo",
+    "status": "COMPLETE",
+    "initialization": "scratch",
+    "config": "stage7_100_epochs.yaml",
+    "config_sha256": "c3c6d842e993037576c0f3b466dceb6d2bed334dd8bff3dbfe218b5313e18ceb",
+    "resumed": false,
+    "structure": {
+      "backbone": "LeYOLO-Nano",
+      "head": "DetectDBB",
+      "dbb_count": 6,
+      "dbb_mode": "TRAIN multibranch",
+      "mgconv_positions": [
+        21,
+        24
+      ],
+      "mgconv_groups": [
+        2,
+        2
+      ],
+      "classes": [
+        "D00",
+        "D10",
+        "D20",
+        "D40"
+      ],
+      "strides": [
+        8,
+        16,
+        32
+      ],
+      "parameters": 3073884,
+      "gflops_640": 8.56617,
+      "flops_profile": {
+        "gflops": 8.5661696,
+        "macs": 4283084800,
+        "parameters": 3073884,
+        "method": "ultralytics-thop full 1x3x640x640 CPU forward; FLOPs=2*MACs",
+        "thop_version": "2.1.6"
+      }
+    },
+    "epochs": 100,
+    "best_epoch": 99,
+    "training_seconds": 5097.01,
+    "seconds_per_epoch": 50.9701,
+    "peak_allocated_bytes": 2780131840,
+    "training_return_metrics": {
+      "metrics/precision(B)": 0.7250210806570742,
+      "metrics/recall(B)": 0.6825639379535681,
+      "metrics/mAP50(B)": 0.744883402579343,
+      "metrics/mAP50-95(B)": 0.43915419646651016,
+      "fitness": 0.43915419646651016
+    },
+    "explicit_best_validation": {
+      "metrics/precision(B)": 0.7223409279517038,
+      "metrics/recall(B)": 0.683861464745766,
+      "metrics/mAP50(B)": 0.7447747153731082,
+      "metrics/mAP50-95(B)": 0.44069837323029837,
+      "fitness": 0.44069837323029837
+    },
+    "per_class": {
+      "D00": {
+        "precision": 0.7038809612960325,
+        "recall": 0.7070124381026854,
+        "mAP50": 0.7637380807174607,
+        "mAP50_95": 0.4529779580596148
+      },
+      "D10": {
+        "precision": 0.7493439751017243,
+        "recall": 0.7764705882352941,
+        "mAP50": 0.8179080601625077,
+        "mAP50_95": 0.4522308898913102
+      },
+      "D20": {
+        "precision": 0.7814969559607561,
+        "recall": 0.6637275385274375,
+        "mAP50": 0.7335553986218017,
+        "mAP50_95": 0.4720684610757212
+      },
+      "D40": {
+        "precision": 0.6546418194483022,
+        "recall": 0.5882352941176471,
+        "mAP50": 0.6638973219906626,
+        "mAP50_95": 0.3855161838945475
+      }
+    },
+    "best_pt": "/content/drive/MyDrive/TP1_LMD/stage7/results/training/lmd_yolo/weights/best.pt",
+    "last_pt": "/content/drive/MyDrive/TP1_LMD/stage7/results/training/lmd_yolo/weights/last.pt",
+    "results_csv": "/content/drive/MyDrive/TP1_LMD/stage7/results/training/lmd_yolo/results.csv",
+    "best_pt_sha256": "01c45ad525915aa17776939894213fbaada89b3a9d523297b8f55f7c2b84945b",
+    "last_pt_sha256": "7045b58cbd38750149ee1e484bc8490b871ea076cf489c3fdb1210c84df9d16d"
+  },
+  "note": "Do not declare a winner from one metric; review stability, convergence, classes, time and compute cost."
+}
