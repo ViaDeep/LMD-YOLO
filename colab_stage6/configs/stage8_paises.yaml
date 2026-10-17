@@ -1,0 +1,65 @@
+experiment: stage8_finetune_rdd2022_paises
+initialization: stage7_best_both
+initialization_rationale: >-
+  Los dos modelos parten de su best.pt de la etapa 7 (100 épocas desde cero con la misma seed y los mismos
+  datos), así que ambos llegan con la misma exposición previa a RDD2022 China. La etapa 8 agrega imágenes
+  tomadas desde auto de otros países de RDD2022 para reducir la diferencia de dominio con fotos de calle.
+init_weights:
+  lmd_yolo:
+    drive_path: /content/drive/MyDrive/TP1_LMD/stage7/results/training/lmd_yolo/weights/best.pt
+    sha256: 01c45ad525915aa17776939894213fbaada89b3a9d523297b8f55f7c2b84945b
+  yolov8n:
+    drive_path: /content/drive/MyDrive/TP1_LMD/stage7/results/training/yolov8n/weights/best.pt
+    sha256: 2e2bb891a0d471a4bc94053deac872aaaa5bb6b2f41260dd8d322ded93d26bb5
+countries:
+  - Japan
+  - India
+  - Czech
+  - United_States
+# Máximo de imágenes etiquetadas (con al menos un D00/D10/D20/D40) que se toman por país, antes del split.
+max_images_per_country: 2000
+split:
+  train: 0.8
+  val: 0.1
+  # El 10 % restante de cada país queda como test bloqueado, igual que el test de China: no se evalúa aquí.
+seed: 42
+epochs: 50
+imgsz: 640
+batch: 16
+optimizer: SGD
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+cos_lr: false
+patience: 100
+amp: true
+deterministic: true
+workers: 2
+augmentations:
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  bgr: 0.0
+  mosaic: 1.0
+  mixup: 0.0
+  cutmix: 0.0
+  copy_paste: 0.0
+  close_mosaic: 10
+validation:
+  split: val
+  test_is_forbidden: true
+smoke:
+  epochs: 1
+  fraction: 0.02
+  batch: 16
