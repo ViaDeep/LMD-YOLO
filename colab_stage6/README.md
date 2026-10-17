@@ -93,3 +93,23 @@ El paquete del repositorio guarda los labels con fin de línea LF, pero los mani
 CRLF. Antes de comprimir hay que restaurar CRLF en los archivos cuyo hash coincide así, o el preflight
 rechazará el dataset.
 
+
+## Etapa 8 — Más países de RDD2022
+
+Ajuste de 50 épocas de los dos modelos desde su `best.pt` de la etapa 7, con `configs/stage8_paises.yaml` y el
+notebook `stage8_colab.ipynb` (script `scripts/stage8.py`). El objetivo es reducir la diferencia de dominio: la
+etapa 7 solo vio China (la mitad desde dron) y falla con fotos de calle tomadas con celular.
+
+- Datos: train y val de China de la etapa 7, más hasta 2000 imágenes etiquetadas por país de Japón, India,
+  República Checa y Estados Unidos (cámaras montadas en auto). Solo se usan imágenes con al menos un
+  D00/D10/D20/D40, la misma regla de `scripts/convert_voc_to_yolo.py`. Cada país se divide 80/10/10 con seed 42.
+- El TEST de China no se copia al dataset de la etapa 8. El 10 % de test de los países nuevos queda en
+  `test_paises_bloqueado`, fuera del YAML de datos; ninguna acción lo evalúa.
+- Descarga: primero `MyDrive/TP1_LMD/rdd2022/RDD2022_<País>.zip` si ya existe, luego el enlace oficial de
+  CRDDC2022 en S3 y, si responde 403, FigShare (artículo 21431547). Si nada funciona, subir a mano el ZIP del país
+  a esa carpeta de Drive.
+- `prepare` guarda en `MyDrive/TP1_LMD/stage8/results/` el dataset armado (`dataset_stage8.zip`) y su manifiesto
+  con SHA-256 por archivo; las sesiones siguientes lo restauran y verifican con `restore`.
+- `baseline` evalúa los modelos de la etapa 7 sobre la validación nueva, por separado en China y en los otros
+  países. `compare` pone al lado los valores de la etapa 8.
+- `train --resume` retoma una corrida cortada desde su `last.pt`.

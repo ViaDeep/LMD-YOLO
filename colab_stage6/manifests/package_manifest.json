@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "file_count": 8091,
+  "file_count": 8094,
   "files": [
     {
       "path": "AUDIT.md",
@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4266,
-      "sha256": "5bd0d9be629cffb39d5f0e32a5bcfb4f00d65eeaae547aa695d395cca852d411"
+      "bytes": 5831,
+      "sha256": "637434d49d38a68691632a3ead80a92afb5aac390c1fbcf3756244c0230ecfa8"
     },
     {
       "path": "configs/comparison.yaml",
@@ -26,6 +26,11 @@
       "path": "configs/stage7_100_epochs.yaml",
       "bytes": 1015,
       "sha256": "c3c6d842e993037576c0f3b466dceb6d2bed334dd8bff3dbfe218b5313e18ceb"
+    },
+    {
+      "path": "configs/stage8_paises.yaml",
+      "bytes": 1742,
+      "sha256": "c01eee560d42861139689322ef7af6b868e596b5d66f18fd31abede82cdddfa1"
     },
     {
       "path": "dataset/data.yaml",
@@ -38603,6 +38608,11 @@
       "sha256": "3a29fbd1d9ab35af18e4f38ab232b99e8c41c189af9459ff7ee00f3bba6746fb"
     },
     {
+      "path": "scripts/stage8.py",
+      "bytes": 19547,
+      "sha256": "0d1b4e1b8184e8f0420dea3ca8fed7c3522ec6af297cb5184d2092b90567ebba"
+    },
+    {
       "path": "stage6_colab.ipynb",
       "bytes": 5546,
       "sha256": "3edcf809c36dd0facfdea005f54c83d9f8b32e8f7908e9315d20f95d8ce287c7"
@@ -38611,6 +38621,11 @@
       "path": "stage7_colab.ipynb",
       "bytes": 6921,
       "sha256": "d172041aa161e64ad153e511c90634fdcd5d929aff5c3360a78f50ce527abdf6"
+    },
+    {
+      "path": "stage8_colab.ipynb",
+      "bytes": 7613,
+      "sha256": "802991881d34a0d8b59430a96d22ae55d8d2b0fcc08f57493e13f054c945541f"
     },
     {
       "path": "vendor/ultralytics/__init__.py",
@@ -40458,5 +40473,5 @@
       "sha256": "4050d7602c2ca72ea74bfc3f51b57a3a2887e56380ce57fc9852c68e2df22662"
     }
   ],
-  "combined_sha256": "9cfa40405fbf875c0da46f5e7be5ba9e108d669d75c6991d21bd11d45f9bdbcc"
+  "combined_sha256": "0ba6f9d62c3b78ca33237c70acb443726cce6fa83ae280d9b3a0c346d754aa0b"
 }
