@@ -1,0 +1,55 @@
+experiment: stage9_entrenamiento_final
+initialization: stage8_best_both
+initialization_rationale: >-
+  Entrenamiento final. Los dos modelos siguen desde su best.pt de la etapa 8, con los mismos datos y
+  hiperparámetros, porque en la etapa 8 las curvas de validación seguían subiendo en la época 50.
+# Dataset armado en la etapa 8 (China + Japón, India, República Checa y Estados Unidos); no se vuelve a armar.
+dataset_results_root: /content/drive/MyDrive/TP1_LMD/stage8/results
+init_weights:
+  lmd_yolo:
+    drive_path: /content/drive/MyDrive/TP1_LMD/stage8/results/training/lmd_yolo/weights/best.pt
+    sha256: 14b55a1e310464a0a847d20a7a92a08be8665f5daad56f3e244f6b02eb565649
+  yolov8n:
+    drive_path: /content/drive/MyDrive/TP1_LMD/stage8/results/training/yolov8n/weights/best.pt
+    sha256: 0da6bbfd94dba80c8b4f82f9c23f04248eb4379a613c7d7368192596bfdd6113
+seed: 42
+epochs: 100
+imgsz: 640
+batch: 16
+optimizer: SGD
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+cos_lr: false
+patience: 100
+amp: true
+deterministic: true
+workers: 2
+augmentations:
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  bgr: 0.0
+  mosaic: 1.0
+  mixup: 0.0
+  cutmix: 0.0
+  copy_paste: 0.0
+  close_mosaic: 10
+validation:
+  split: val
+  test_is_forbidden: true
+smoke:
+  epochs: 1
+  fraction: 0.02
+  batch: 16

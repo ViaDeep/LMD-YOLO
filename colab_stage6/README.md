@@ -113,3 +113,18 @@ etapa 7 solo vio China (la mitad desde dron) y falla con fotos de calle tomadas 
 - `baseline` evalúa los modelos de la etapa 7 sobre la validación nueva, por separado en China y en los otros
   países. `compare` pone al lado los valores de la etapa 8.
 - `train --resume` retoma una corrida cortada desde su `last.pt`.
+
+## Etapa 9 — Entrenamiento final
+
+Los dos modelos siguen 100 épocas más desde su `best.pt` de la etapa 8, con el mismo dataset y los mismos
+hiperparámetros (`configs/stage9_final.yaml`, notebook `stage9_colab.ipynb`, script `scripts/stage9.py`). En la
+etapa 8 las curvas de validación seguían subiendo en la época 50.
+
+- No se arma un dataset nuevo: se restaura `dataset_stage8.zip` desde `MyDrive/TP1_LMD/stage8/results/` y se
+  verifica con su manifiesto. Los pesos iniciales se comprueban por SHA-256.
+- `smoke`, `train` (con `--resume` si se cortó) y `compare` funcionan como en la etapa 8. `compare` pone la etapa 8
+  y la etapa 9 en una misma curva (épocas 1-50 y 51-150).
+- `training_seconds` suma las sesiones: al reanudar, Ultralytics reinicia la columna `time` de `results.csv`.
+- `test --confirmo-modelo-final` es la única acción que lee el TEST de China y el test bloqueado de los otros
+  países. Evalúa los dos `best.pt` finales una sola vez, guarda `test_final/test_report.json` y se niega a correr
+  de nuevo si esa carpeta ya existe.
