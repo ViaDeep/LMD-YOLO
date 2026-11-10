@@ -128,3 +128,15 @@ etapa 8 las curvas de validación seguían subiendo en la época 50.
 - `test --confirmo-modelo-final` es la única acción que lee el TEST de China y el test bloqueado de los otros
   países. Evalúa los dos `best.pt` finales una sola vez, guarda `test_final/test_report.json` y se niega a correr
   de nuevo si esa carpeta ya existe.
+
+## Etapa 10 — Fotos de Lima
+
+Los dos modelos siguen 50 épocas desde su `best.pt` de la etapa 9 con fotos de calles de Lima tomadas con celular
+(`configs/stage10_lima.yaml`, `configs/lima_split.json`, notebook `stage10_colab.ipynb`, script
+`scripts/stage10.py`). Resultados en `results_stage10/`.
+
+- Las 83 fotos etiquetadas en CVAT se dividen una sola vez en 59/12/12 (`lima_split.json`). Cada época mezcla las
+  59 de entrenamiento, repetidas 6 veces, con 1200 fotos fijas del entrenamiento de la etapa 8.
+- La validación tiene grupos separados: Lima, China y otros países (`val_total` los junta).
+- El test de Lima queda bloqueado, igual que los demás test; solo lo lee la acción `test`, una sola vez.
+
