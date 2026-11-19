@@ -140,3 +140,17 @@ Los dos modelos siguen 50 épocas desde su `best.pt` de la etapa 9 con fotos de 
 - La validación tiene grupos separados: Lima, China y otros países (`val_total` los junta).
 - El test de Lima queda bloqueado, igual que los demás test; solo lo lee la acción `test`, una sola vez.
 
+
+## Etapa 11 — Todas las fotos de Lima
+
+Repite la etapa 10 con las 121 fotos de Lima etiquetadas hasta ahora: las 83 de la etapa 10 y 38 nuevas, de un
+segundo export de CVAT (`configs/stage11_lima.yaml`, `configs/lima_split_stage11.json`, notebook
+`stage11_colab.ipynb`, script `scripts/stage11.py`). Los dos modelos parten otra vez del `best.pt` de la etapa 9 con
+la misma configuración, así la única diferencia con la etapa 10 es la cantidad de fotos de Lima.
+
+- Las 83 fotos de la etapa 10 conservan su grupo. Las 38 nuevas se dividieron aparte, 70/15/15 por su clase más rara
+  (semilla 42): 27/6/5. En total, 86 de entrenamiento, 18 de validación y 17 de test bloqueado.
+- El script lee un zip de CVAT en `TP1_LMD/stage10/` y otro en `TP1_LMD/stage11/`.
+- La línea base mide los modelos de la etapa 9 y los de la época 50 de la etapa 10 (el que usa la app) en la
+  validación nueva, para comparar las tres etapas sobre los mismos datos.
+- Además del `best.pt`, se valida el `last.pt` (época 50), porque la app usa la última época.

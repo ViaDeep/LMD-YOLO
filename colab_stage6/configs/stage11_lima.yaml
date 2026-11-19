@@ -1,0 +1,76 @@
+experiment: stage11_lima
+initialization: stage9_best_both
+initialization_rationale: >-
+  Repite el ajuste de la etapa 10 con todas las fotos de Lima etiquetadas (export de la etapa 10 + export nuevo).
+  Los dos modelos parten otra vez de su best.pt de la etapa 9 y con la misma configuración, así la única
+  diferencia con la etapa 10 es la cantidad de fotos de Lima. Para que no olviden RDD2022, cada época mezcla las fotos de Lima (repetidas lima_repeat veces) con
+  una muestra fija del entrenamiento de la etapa 8, y la validación incluye China y los otros países.
+# Dataset de la etapa 8 (de ahí salen la muestra de entrenamiento y las validaciones de China y otros países).
+stage8_results_root: /content/drive/MyDrive/TP1_LMD/stage8/results
+# Carpetas con los zips exportados de CVAT (formato Ultralytics YOLO); en cada una debe haber un solo .zip.
+lima_dirs:
+  - /content/drive/MyDrive/TP1_LMD/stage10
+  - /content/drive/MyDrive/TP1_LMD/stage11
+# Las 83 fotos de la etapa 10 conservan su grupo. Las 38 nuevas se dividieron aparte, 70/15/15 por su clase más
+# rara (semilla 42): 27 de entrenamiento, 6 de validación y 5 de test.
+lima_split: configs/lima_split_stage11.json
+lima_repeat: 6
+# Las fotos se guardan ya giradas según su EXIF y con el lado mayor en 1280 px (el modelo trabaja en 640).
+lima_max_side: 1280
+rdd_train_sample: 1200
+init_weights:
+  lmd_yolo:
+    drive_path: /content/drive/MyDrive/TP1_LMD/stage9/results/training/lmd_yolo/weights/best.pt
+    sha256: 51ff6d1e37174311848dd56059b415278b7c19c9a96283c50fd4a30d6c2880a1
+  yolov8n:
+    drive_path: /content/drive/MyDrive/TP1_LMD/stage9/results/training/yolov8n/weights/best.pt
+    sha256: a21ee91ae1c2c81295f7c61bcf054883b8b87abd9c4b11ba5a5597cc830130ea
+# Modelos de la etapa 10 (época 50, el que usa la app) para compararlos en la misma validación.
+stage10_weights:
+  lmd_yolo:
+    drive_path: /content/drive/MyDrive/TP1_LMD/stage10/results/training/lmd_yolo/weights/last.pt
+    sha256: ad782f56aabb9b3b3e4f407dc57328a89b28c01f37821b0edd7a532d893f71cb
+  yolov8n:
+    drive_path: /content/drive/MyDrive/TP1_LMD/stage10/results/training/yolov8n/weights/last.pt
+seed: 42
+epochs: 50
+imgsz: 640
+batch: 16
+optimizer: SGD
+# Tasa más baja que en las etapas 8 y 9: pocos datos nuevos y no se quiere borrar lo aprendido.
+lr0: 0.002
+lrf: 0.1
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 1.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.01
+cos_lr: false
+patience: 100
+amp: true
+deterministic: true
+workers: 2
+augmentations:
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  bgr: 0.0
+  mosaic: 1.0
+  mixup: 0.0
+  cutmix: 0.0
+  copy_paste: 0.0
+  close_mosaic: 10
+validation:
+  split: val
+  test_is_forbidden: true
+smoke:
+  epochs: 1
+  fraction: 0.05
+  batch: 16
