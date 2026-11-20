@@ -3,7 +3,7 @@
 Final models: the 50/50 weight averages of Stage 10 and Stage 11 (soup/weights/*_alpha50.pt), the LMD-YOLO one is the
 model in the app. The Stage-9 models (before the Lima fine-tuning) are evaluated in the same run as the 'before'
 reference. The TEST is read only here; the script refuses to run a second time. Results go to
-<results-root>/test_final/test_report.json.
+<results-root>/test_modelo_final/test_report.json.
 """
 
 from __future__ import annotations
@@ -32,7 +32,7 @@ def main() -> None:
     stage11.CONFIG_PATH = stage11.stage6.CONFIG_PATH = stage11.stage8.CONFIG_PATH = args.config.expanduser().resolve()
     root = args.results_root.expanduser().resolve()
     cfg = stage11.load_config()
-    out = root / "test_final"
+    out = root / "test_modelo_final"
     if out.exists():
         raise FileExistsError(f"El TEST ya se evaluó ({out}); no se vuelve a evaluar")
 
